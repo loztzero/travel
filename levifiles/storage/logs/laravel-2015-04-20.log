@@ -1,0 +1,200 @@
+[2015-04-20 14:27:48] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:28:22] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:28:46] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:29:00] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:31:55] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:32:22] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:35:27] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:35:36] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:35:44] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:36:35] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:36:39] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:36:48] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:37:48] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:37:59] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:38:09] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'HTML' not found' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:11
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:40:57] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Undefined constant 'Illuminate\Routing\UrlGenerator'' in D:\xampp2\htdocs\levi-master\levifiles\app\Http\routes.php:13
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:41:10] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Undefined constant 'App\Http\Controllers\Illuminate\Routing\UrlGenerator'' in D:\xampp2\htdocs\levi-master\levifiles\app\Http\Controllers\MainController.php:3
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:41:34] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:42:29] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:44:59] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:34
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:45:05] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'HTML' not found' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:11
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:45:11] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'HTML' not found' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:11
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:45:25] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'HTML' not found' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:11
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:45:37] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'HTML' not found' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:11
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:45:46] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'HTML' not found' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:11
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:46:16] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'HTML' not found' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:11
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
+#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#2 {main}  
+[2015-04-20 14:55:30] production.ERROR: exception 'ErrorException' with message 'Undefined property: Illuminate\View\Factory::$yieldContent' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:44
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4(44): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined prope...', 'D:\\xampp2\\htdoc...', 44, Array)
+#1 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(13547): include('D:\\xampp2\\htdoc...')
+#2 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(13580): Illuminate\View\Engines\PhpEngine->evaluatePath('D:\\xampp2\\htdoc...', Array)
+#3 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(13420): Illuminate\View\Engines\CompilerEngine->get('D:\\xampp2\\htdoc...', Array)
+#4 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(13407): Illuminate\View\View->getContents()
+#5 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(13398): Illuminate\View\View->renderContents()
+#6 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(14494): Illuminate\View\View->render()
+#7 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(14023): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#8 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(7071): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#9 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(6863): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#10 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(6846): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#11 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1884): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#13 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(8866): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#14 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(2373): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 D:\xampp2\htdocs\levi-master\levifiles\app\Http\Middleware\VerifyCsrfToken.php(17): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(8858): App\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(11990): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(8858): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#19 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(10696): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(8858): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(11696): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(8858): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(11645): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(8858): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(2411): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(8858): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(8849): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#29 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1862): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#30 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1852): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#31 D:\xampp2\htdocs\levi-master\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#32 {main}
+
+Next exception 'ErrorException' with message 'Undefined property: Illuminate\View\Factory::$yieldContent (View: D:\xampp2\htdocs\levi-master\levifiles\resources\views\layouts\frontpage.blade.php)' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\views\fcdd12e78b10c3a345064a5144b936b4:44
+Stack trace:
+#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(13549): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException), 1)
+#1 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(13580): Illuminate\View\Engines\PhpEngine->evaluatePath('D:\\xampp2\\htdoc...', Array)
+#2 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(13420): Illuminate\View\Engines\CompilerEngine->get('D:\\xampp2\\htdoc...', Array)
+#3 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(13407): Illuminate\View\View->getContents()
+#4 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(13398): Illuminate\View\View->renderContents()
+#5 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(14494): Illuminate\View\View->render()
+#6 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(14023): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(7071): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(6863): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#9 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(6846): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#10 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1884): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#12 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(8866): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#13 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(2373): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 D:\xampp2\htdocs\levi-master\levifiles\app\Http\Middleware\VerifyCsrfToken.php(17): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#15 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(8858): App\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(11990): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(8858): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(10696): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(8858): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#20 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(11696): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(8858): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(11645): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#23 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(8858): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(2411): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(8858): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(8849): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#28 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1862): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#29 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1852): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#30 D:\xampp2\htdocs\levi-master\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#31 {main}  
