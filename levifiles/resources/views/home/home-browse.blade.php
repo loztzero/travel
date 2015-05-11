@@ -1,6 +1,6 @@
-@extends('layouts.frontpage')
+@extends('layouts.frontangular')
 @section('content')
-<div class="row">
+<div class="row" ng-controller="MainCtrl">
 	<div class="col-md-4">
 
 		<div class="panel panel-default">
@@ -64,4 +64,12 @@
 
 	</div>
 </div>
+@stop
+
+@section('script')
+<script>
+var app = angular.module("ui.boardingpassku", ['ngSanitize']);
+app.controller("MainCtrl", function ($scope, $http, $filter) {
+});
+</script>
 @stop

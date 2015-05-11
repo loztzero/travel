@@ -1,5 +1,5 @@
 <?php $__env->startSection('content'); ?>
-<div class="row">
+<div class="row" ng-controller="MainCtrl">
 	<div class="col-md-4">
 
 		<div class="panel panel-default">
@@ -64,4 +64,12 @@
 	</div>
 </div>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.frontpage', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<?php $__env->startSection('script'); ?>
+<script>
+var app = angular.module("ui.boardingpassku", ['ngSanitize']);
+app.controller("MainCtrl", function ($scope, $http, $filter) {
+});
+</script>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.frontangular', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -18,7 +18,7 @@
   legend {font-size:15px;}
   </style>
 </head>
-<body ng-controller="MainCtrl">
+<body>
 
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -34,9 +34,13 @@
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li class="active"><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
-          <li><a href="{{App::make('url')->to('/')}}/tour-package">Tour Package</a></li>
-          <li><a href="{{App::make('url')->to('/')}}/tour-package/tour-detail">Tour Package Detail</a></li>
-          <li><a href="{{App::make('url')->to('/')}}/tour-package/input-tour-detail">Tour Package Detail Input</a></li>
+          
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{{App::make('url')->to('/user')}}">Nama User</a></li>
+          <li><a href="{{App::make('url')->to('/main/')}}/login">Login</a></li>
+          <li><a href="{{App::make('url')->to('/main/')}}/register">Register</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>

@@ -10,8 +10,8 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
-Route::get('main', 'MainController@index');
+Route::controller('user', 'UserController');
+Route::controller('main', 'MainController');
 
 //Route::get('/', 'WelcomeController@index');
 Route::controller('angular', 'AngularController');
