@@ -8,36 +8,78 @@
 				<h3 class="panel-title">Pendaftaran</h3>
 			</div>
 			<div class="panel-body">
+				@if (count($errors) > 0)
+				<div class="alert alert-danger" role="alert">
+					@foreach ($errors as $key)
+						{!! $key !!} <br>
+					@endforeach
+				</div>
+				@endif
 
-				<form class="form-horizontal">
+				<form class="form-horizontal" method="post" action="../user/save">
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					<div class="form-group">
+						<label for="UserCode" class="col-sm-3 control-label">BoardingPassKu ID</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="UserCode" name="UserCode" placeholder="BoardingPassKu ID" value="{{ old('UserCode') }}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="Password" class="col-sm-3 control-label">Sandi</label>
+						<div class="col-sm-8">
+							<input type="password" class="form-control" id="Password" name="Password" placeholder="Sandi">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="RePassword" class="col-sm-3 control-label">Konfirmasi Sandi</label>
+						<div class="col-sm-8">
+							<input type="password" class="form-control" id="RePassword" name="RePassword" placeholder="Konfirmasi Sandi">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="Email" class="col-sm-3 control-label">Alamat Email</label>
+						<div class="col-sm-8">
+							<input type="email" class="form-control" id="Email" name="Email" placeholder="Alamat Email" value="{{ old('Email') }}">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-3 col-sm-8">
+							<button type="submit" class="btn btn-primary">Daftar</button>
+						</div>
+					</div>
+				</form>
+
+				{{-- action="validate-register" --}}
+				<!-- <form class="form-horizontal" method="post" action="../user/save">
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 					<div class="form-group">
 						<label for="firstName" class="col-sm-2 control-label">Nama Depan</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="firstName" placeholder="Nama Depan">
+							<input type="text" class="form-control" id="firstName" name="firstName" placeholder="Nama Depan">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="lastName" class="col-sm-2 control-label">Nama Belakang</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="lastName" placeholder="Nama Belakang">
+							<input type="text" class="form-control" id="lastName" name="lastName" placeholder="Nama Belakang">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="alamatEmail" class="col-sm-2 control-label">Alamat Email</label>
 						<div class="col-sm-10">
-							<input type="email" class="form-control" id="alamatEmail" placeholder="Alamat Email">
+							<input type="email" class="form-control" id="alamatEmail" name="email" placeholder="Alamat Email">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="sandi" class="col-sm-2 control-label">Sandi</label>
 						<div class="col-sm-10">
-							<input type="password" class="form-control" id="sandi" placeholder="Sandi">
+							<input type="password" class="form-control" id="sandi" name="password" placeholder="Sandi">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="konfirmasiSandi" class="col-sm-2 control-label">Konfirmasi Sandi</label>
 						<div class="col-sm-10">
-							<input type="password" class="form-control" id="konfirmasiSandi" placeholder="Sandi">
+							<input type="password" class="form-control" id="konfirmasiSandi" name="rePassword" placeholder="Sandi">
 						</div>
 					</div>
 					<div class="form-group">
@@ -47,6 +89,7 @@
 					</div>
 				</form>
 
+				<button id="zz">Press</button> -->
 			</div>
 		</div>
 
@@ -58,6 +101,17 @@
 <script>
 var app = angular.module("ui.boardingpassku", ['ngSanitize']);
 app.controller("MainCtrl", function ($scope, $http, $filter) {
+});
+
+$("#zz").click(function(){
+    $.post("validate-register", 
+    	{
+          _token: "{{ csrf_token() }}",
+          city: "Duckburg"
+        }
+    	,function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+    });
 });
 </script>
 @stop

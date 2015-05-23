@@ -9,12 +9,19 @@
 			</div>
 			<div class="panel-body">
 
-				<form>
+				@if (Session::has('error'))
+	            <div class="alert alert-danger" role="alert">
+	              {{ Session::get('error') }}
+	            </div>
+	            @endif
+
+				<form action="check" method="post">
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 					<div class="form-group">
-						<input type="email" class="form-control" id="email" placeholder="Alamat Email">
+						<input type="text" class="form-control" id="UserCode" name="UserCode" placeholder="BoardingPassKu ID">
 					</div>
 					<div class="form-group">
-						<input type="password" class="form-control" id="sandi" placeholder="Sandi">
+						<input type="password" class="form-control" id="sandi" name="password" placeholder="Sandi">
 					</div>
 					<button type="submit" class="btn btn-primary pull-right">Login</button>
 				</form>

@@ -5,15 +5,14 @@
 		<b><big>Menu</big></b>
 		<ul class="list-group">
 			<li class="list-group-item active">Welcome Nama User</li>
-			<li class="list-group-item">Dapibus ac facilisis in</li>
-			<li class="list-group-item">Morbi leo risus</li>
-			<li class="list-group-item">Porta ac consectetur ac</li>
-			<li class="list-group-item">Vestibulum at eros</li>
+			<li class="list-group-item"><a href="#">Input Data Penumpang</a></li>
+			<li class="list-group-item"><a href="#">Logout</a></li>
 		</ul>
 
 	</div>
 
 	<div class="col-md-8">
+		<b><big>&nbsp;</big></b>
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<h1>Jadwal Tour</h1>
