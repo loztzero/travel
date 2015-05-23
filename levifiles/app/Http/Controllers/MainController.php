@@ -53,9 +53,7 @@ class MainController extends Controller {
 			return Redirect::to('/main');
 		} else {
 			Session::flash('error', 'User atau password salah');
-			//return Redirect::to('main/login');
-			print_r($userdata);
-			print_r(Auth::check());
+			return Redirect::to('main/login');
 		}
 
 	}
