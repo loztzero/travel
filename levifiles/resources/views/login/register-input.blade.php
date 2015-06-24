@@ -16,30 +16,24 @@
 				</div>
 				@endif
 
-				<form class="form-horizontal" method="post" action="../user/save">
+				<form class="form-horizontal" method="post" action="../main/save">
 					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 					<div class="form-group">
-						<label for="UserCode" class="col-sm-3 control-label">BoardingPassKu ID</label>
+						<label for="email" class="col-sm-3 control-label">Email</label>
 						<div class="col-sm-8">
-							<input type="text" class="form-control" id="UserCode" name="UserCode" placeholder="BoardingPassKu ID" value="{{ old('UserCode') }}">
+							<input type="email" class="form-control" id="email" name="email" placeholder="Email" value="{{ old('email') }}">
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="Password" class="col-sm-3 control-label">Sandi</label>
+						<label for="password" class="col-sm-3 control-label">Sandi</label>
 						<div class="col-sm-8">
-							<input type="password" class="form-control" id="Password" name="Password" placeholder="Sandi">
+							<input type="password" class="form-control" id="password" name="password" placeholder="Sandi">
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="RePassword" class="col-sm-3 control-label">Konfirmasi Sandi</label>
+						<label for="repassword" class="col-sm-3 control-label">Konfirmasi Sandi</label>
 						<div class="col-sm-8">
-							<input type="password" class="form-control" id="RePassword" name="RePassword" placeholder="Konfirmasi Sandi">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="Email" class="col-sm-3 control-label">Alamat Email</label>
-						<div class="col-sm-8">
-							<input type="email" class="form-control" id="Email" name="Email" placeholder="Alamat Email" value="{{ old('Email') }}">
+							<input type="password" class="form-control" id="repassword" name="repassword" placeholder="Konfirmasi Sandi">
 						</div>
 					</div>
 					<div class="form-group">

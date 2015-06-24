@@ -1,8 +1,8 @@
 @extends('layouts.frontangular')
 @section('content')
 <div class="row" ng-controller="MainCtrl">
-	<div class="col-md-4">
-		<h1>Anda Telah Logout</h1>
+	<div class="col-md-12">
+		<h1>Halaman Yang Anda Cari Tidak Ditemukan</h1>
 	</div>
 </div>
 @stop

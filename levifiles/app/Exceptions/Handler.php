@@ -38,6 +38,7 @@ class Handler extends ExceptionHandler {
     {
         if ($this->isHttpException($e))
         {
+        	//print_r($e->getStatusCode());
             return $this->renderHttpException($e);
         }
 

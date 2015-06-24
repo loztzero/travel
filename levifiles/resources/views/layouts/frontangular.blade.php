@@ -14,9 +14,6 @@
 <link href="{{ App::make('url')->to('/') }}/assets/css/summernote.css" rel="stylesheet">
 <link href="{{ App::make('url')->to('/') }}/assets/css/summernote-bs3.css" rel="stylesheet">
 
-  <style>
-  legend {font-size:15px;}
-  </style>
 </head>
 <body>
 
@@ -33,14 +30,23 @@
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="{{App::make('url')->to('/main')}}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
-          
+          <li>
+            <a href="{{App::make('url')->to('/main')}}">
+              <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+            </a>  
+          </li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="{{App::make('url')->to('/user')}}">Nama User</a></li>
+          @if ( Auth::check() )
+          <li>
+            <a href="{{App::make('url')->to('/user')}}">{{ Auth::user()->email }}
+            </a>
+          </li>
+          @else
           <li><a href="{{App::make('url')->to('/main/')}}/login">Login</a></li>
           <li><a href="{{App::make('url')->to('/main/')}}/register">Register</a></li>
+          @endif
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -51,10 +57,10 @@
   </div><!-- /.container -->
 
 </body>
-<script src="{{App::make('url')->to('/')}}/assets/js/angular.js"></script>
-<script src="{{App::make('url')->to('/')}}/assets/js/ui-bootstrap-tpls-0.13.0.js"></script>
+<script src="{{App::make('url')->to('/')}}/assets/js/angular-latest.js"></script>
 <script src="{{App::make('url')->to('/')}}/assets/js/angular-sanitize.js"></script>
 <script src="{{App::make('url')->to('/')}}/assets/js/jquery.js"></script>
 <script src="{{App::make('url')->to('/')}}/assets/js/bootstrap.js"></script>
+<script src="{{App::make('url')->to('/')}}/assets/js/ui-bootstrap-tpls-0.13.0.js"></script>
 @yield('script')
 </html>

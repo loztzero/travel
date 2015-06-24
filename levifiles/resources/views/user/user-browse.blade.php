@@ -1,57 +1,58 @@
 @extends('layouts.frontangular')
 @section('content')
-<div class="row" ng-controller="MainCtrl">
-	<div class="col-md-4">
-		<b><big>Menu</big></b>
-		<ul class="list-group">
-			<li class="list-group-item active">Welcome Nama User</li>
-			<li class="list-group-item"><a href="#">Input Data Penumpang</a></li>
-			<li class="list-group-item"><a href="#">Logout</a></li>
-		</ul>
+
+	<div class="row" ng-controller="MainCtrl">		
+	@include('user.user-left-nav')
+	<div class="col-md-8">
+
+		<form>
+
+		  <div class="form-group">
+		    <label for="address1">Alamat 1</label>
+		    <input type="text" class="form-control" id="address1" name="address1" placeholder="Alamat 1">
+		  </div>
+
+		  <div class="form-group">
+		    <label for="address2">Alamat 2</label>
+		    <input type="text" class="form-control" id="address2" name="address2" placeholder="Alamat 2">
+		  </div>
+
+		  <div class="form-group">
+		    <label for="address3">Alamat 3</label>
+		    <input type="text" class="form-control" id="address3" name="address3" placeholder="Alamat 3">
+		  </div>
+
+		  <div class="form-group">
+		    <label for="city">Kota</label>
+		    <input type="text" class="form-control" id="city" name="city" placeholder="Kota">
+		  </div>
+
+		  <div class="form-group">
+		    <label for="country">Negara</label>
+		    <input type="text" class="form-control" id="country" name="country" placeholder="Negara">
+		  </div>
+
+		  <div class="form-group">
+		    <label for="zipCode">Kode Pos</label>
+		    <input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="Kode Pos">
+		  </div>
+
+		  <div class="form-group">
+		    <label for="description">Deskripsi</label>
+		    <input type="text" class="form-control" id="description" name="description" placeholder="Deskripsi">
+		  </div>
+
+		  <button type="submit" class="btn btn-primary">Submit</button>
+		</form>
 
 	</div>
 
-	<div class="col-md-8">
-		<b><big>&nbsp;</big></b>
-		<div class="panel panel-default">
-			<div class="panel-body">
-				<h1>Jadwal Tour</h1>
-				<h3>Day 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit leo nisl, eget eleifend nibh sollicitudin a. Aliquam sagittis facilisis velit ut pharetra. Fusce mattis odio et porta aliquet. Cras eu augue in tortor lobortis elementum. Nunc fringilla, neque eget rhoncus dapibus, ligula felis placerat sem, a mattis leo justo ac mauris. Nunc accumsan dui quis nisi fringilla scelerisque. Nullam porta ultricies augue sed sollicitudin. Donec eget augue quis lacus cursus tempor vitae at velit. Vestibulum vel odio et magna sodales rutrum. Cras tincidunt vel est sed porta. Proin mattis lectus sit amet tellus interdum, nec mattis augue vehicula. Quisque semper ut ipsum ac posuere. Pellentesque quis scelerisque lorem. Pellentesque pharetra augue porttitor orci dapibus, ac ultrices purus gravida.
-				</p>
+@stop
 
-				<h3>Day 2: Nam vitae dolor a libero sollicitudin tempus.</h3>
-
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit leo nisl, eget eleifend nibh sollicitudin a. Aliquam sagittis facilisis velit ut pharetra. Fusce mattis odio et porta aliquet. Cras eu augue in tortor lobortis elementum. Nunc fringilla, neque eget rhoncus dapibus, ligula felis placerat sem, a mattis leo justo ac mauris. Nunc accumsan dui quis nisi fringilla scelerisque. Nullam porta ultricies augue sed sollicitudin. Donec eget augue quis lacus cursus tempor vitae at velit. Vestibulum vel odio et magna sodales rutrum. Cras tincidunt vel est sed porta. Proin mattis lectus sit amet tellus interdum, nec mattis augue vehicula. Quisque semper ut ipsum ac posuere. Pellentesque quis scelerisque lorem. Pellentesque pharetra augue porttitor orci dapibus, ac ultrices purus gravida.</p>
-
-					<h3>Day 3: Ut posuere metus eget enim scelerisque semper.</h3>
-
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit leo nisl, eget eleifend nibh sollicitudin a. Aliquam sagittis facilisis velit ut pharetra. Fusce mattis odio et porta aliquet. Cras eu augue in tortor lobortis elementum. Nunc fringilla, neque eget rhoncus dapibus, ligula felis placerat sem, a mattis leo justo ac mauris. Nunc accumsan dui quis nisi fringilla scelerisque. Nullam porta ultricies augue sed sollicitudin. Donec eget augue quis lacus cursus tempor vitae at velit. Vestibulum vel odio et magna sodales rutrum. Cras tincidunt vel est sed porta. Proin mattis lectus sit amet tellus interdum, nec mattis augue vehicula. Quisque semper ut ipsum ac posuere. Pellentesque quis scelerisque lorem. Pellentesque pharetra augue porttitor orci dapibus, ac ultrices purus gravida.</p>
-
-						<h3>Day 4: Ut posuere metus eget enim scelerisque semper.</h3>
-
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit leo nisl, eget eleifend nibh sollicitudin a. Aliquam sagittis facilisis velit ut pharetra. Fusce mattis odio et porta aliquet. Cras eu augue in tortor lobortis elementum. Nunc fringilla, neque eget rhoncus dapibus, ligula felis placerat sem, a mattis leo justo ac mauris. Nunc accumsan dui quis nisi fringilla scelerisque. Nullam porta ultricies augue sed sollicitudin. Donec eget augue quis lacus cursus tempor vitae at velit. Vestibulum vel odio et magna sodales rutrum. Cras tincidunt vel est sed porta. Proin mattis lectus sit amet tellus interdum, nec mattis augue vehicula. Quisque semper ut ipsum ac posuere. Pellentesque quis scelerisque lorem. Pellentesque pharetra augue porttitor orci dapibus, ac ultrices purus gravida.
-						</p>
-
-						<h3>Day 5: Ut posuere metus eget enim scelerisque semper.</h3>
-
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit leo nisl, eget eleifend nibh sollicitudin a. Aliquam sagittis facilisis velit ut pharetra. Fusce mattis odio et porta aliquet. Cras eu augue in tortor lobortis elementum. Nunc fringilla, neque eget rhoncus dapibus, ligula felis placerat sem, a mattis leo justo ac mauris. Nunc accumsan dui quis nisi fringilla scelerisque. Nullam porta ultricies augue sed sollicitudin. Donec eget augue quis lacus cursus tempor vitae at velit. Vestibulum vel odio et magna sodales rutrum. Cras tincidunt vel est sed porta. Proin mattis lectus sit amet tellus interdum, nec mattis augue vehicula. Quisque semper ut ipsum ac posuere. Pellentesque quis scelerisque lorem. Pellentesque pharetra augue porttitor orci dapibus, ac ultrices purus gravida.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		@stop
-
-		@section('script')
-		<script>
-		var app = angular.module("ui.boardingpassku", ['ngSanitize']);
-		app.controller("MainCtrl", function ($scope, $http, $filter) {
-		});
-		</script>
-		@stop
+@section('script')
+<script>
+var app = angular.module("ui.boardingpassku", ['ngSanitize']);
+app.controller("MainCtrl", function ($scope, $http, $filter) {
+});
+</script>
+@stop

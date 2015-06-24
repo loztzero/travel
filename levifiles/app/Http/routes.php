@@ -10,7 +10,18 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::controller('user', 'UserController');
+Route::filter('auth', function($route, $request)
+{
+    // Login check (Default)
+    if (Auth::guest()) return Redirect::guest('/main');
+
+});
+
+Route::group(array('before' => 'auth'), function(){
+	Route::controller('user', 'UserController');
+});
+
+Route::controller('builder', 'BuilderController');
 Route::controller('main', 'MainController');
 
 //Route::get('/', 'WelcomeController@index');

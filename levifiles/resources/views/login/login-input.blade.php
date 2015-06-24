@@ -18,10 +18,10 @@
 				<form action="check" method="post">
 					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 					<div class="form-group">
-						<input type="text" class="form-control" id="UserCode" name="UserCode" placeholder="BoardingPassKu ID">
+						<input type="text" class="form-control" id="email" name="email" placeholder="Email">
 					</div>
 					<div class="form-group">
-						<input type="password" class="form-control" id="sandi" name="password" placeholder="Sandi">
+						<input type="password" class="form-control" id="password" name="password" placeholder="Sandi">
 					</div>
 					<button type="submit" class="btn btn-primary pull-right">Login</button>
 				</form>

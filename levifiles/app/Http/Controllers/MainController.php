@@ -1,17 +1,14 @@
 <?php namespace App\Http\Controllers;
 
 use Illuminate\Routing\UrlGenerator;
-use Input;
-use Auth;
-use Session;
-use Redirect;
-use Hash;
+use Input, Auth, Request, Session, Redirect, Hash;
+use App\User;
 class MainController extends Controller {
 
 	public function getIndex()
 	{
 		if(Auth::check()){
-			echo "welcome".Auth::user()->UserCode;
+			//echo "welcome".Auth::user()->email;
 		}
 
 		return view('home.home-browse', array('data' => 'bebek'));
@@ -19,16 +16,55 @@ class MainController extends Controller {
 
 	public function getRegister()
 	{
-		return view('login.register-input');
+		return view('login.register-input');	
+	}
+
+	public function postSave(){
+
+		$data = Input::all();
+		$user = new User();
+		$errorBag = $user->rules($data);
+		
+		if(count($errorBag) > 0){
+			return redirect('main/register')
+				->withInput(Request::except('password', 'repassword'))
+				->with('errors', $errorBag);	
+		} else {
+
+			$userMail = User::where('email' , '=', $data['email'])->first();
+			if($userMail != null) {
+
+				return redirect('main/register')
+				->withInput(Request::except('password', 'repassword'))
+				->with('errors', array('BoardingPassKu dengan Email <b>'.$data['Email'].'</b> telah digunakan'));
+
+			}
+
+			$user = new User();
+			$user->password = Hash::make($data['password']);
+			$user->email = $data['email'];
+			$user->role = 'User';
+			$user->save();
+
+			return redirect('main/success');
+		}
+
+		
+		// print_r($errorBag);
 	}
 
 	public function getLogin()
 	{
-		return view('login.login-input');
+		if(Auth::check()){
+			return Redirect::to('/main');
+		} else {
+			return view('login.login-input');
+		}
 	}
 
 	public function getLogout()
 	{
+		Auth::logout();
 		return view('login.logout');
 	}
 
@@ -45,22 +81,17 @@ class MainController extends Controller {
 	public function postCheck(){
 		
 		$userdata = array(
-			'UserCode' => Input::get('UserCode'),
+			'email' => Input::get('email'),
 			'password' => Input::get('password')
 		);
 
-		if(Auth::attempt($userdata, true)){
+		if(Auth::attempt($userdata)){
 			return Redirect::to('/main');
 		} else {
-			Session::flash('error', 'User atau password salah');
+			Session::flash('error', 'Email atau password salah');
 			return Redirect::to('main/login');
 		}
 
-	}
-
-	public function logout(){
-		Auth::logout();
-		return Redirect::to('/');
 	}
 
 }

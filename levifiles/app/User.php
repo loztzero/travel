@@ -17,14 +17,14 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @var string
 	 */
-	protected $table = 'users';
+	protected $table = 'mst001';
 
 	/**
 	 * The attributes that are mass assignable.
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['name', 'email', 'password'];
+	protected $fillable = ['email', 'password'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -52,19 +52,17 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	{
 		$error = array();
 		$rules = array(
-            'UserCode'      => 'required',
-            'Password'      => 'required|min:6',
-            'RePassword'    => 'required|same:Password',
-			'Email'      	=> 'required|email'
+			'email'      	=> 'required|email',
+            'password'      => 'required|min:6',
+            'repassword'    => 'required|same:password'
         );
 
 		$messages = array(
-			'UserCode.required'		=> 'BoardingPassKu ID harus diisi',
-            'Password.required'		=> 'Sandi harus diisi',
-            'Password.min'			=> 'Sandi minimal harus :min karakter',
-            'RePassword.required'	=> 'Konfirmasi sandi harus diisi',
-            'RePassword.same'		=> 'Konfirmasi sandi harus bernilai sama dengan sandi',
-			'Email.required'		=> 'Email harus diisi'
+            'password.required'		=> 'Sandi harus diisi',
+            'password.min'			=> 'Sandi minimal harus :min karakter',
+            'repassword.required'	=> 'Konfirmasi sandi harus diisi',
+            'repassword.same'		=> 'Konfirmasi sandi harus bernilai sama dengan sandi',
+			'email.required'		=> 'Email harus diisi'
 		);
 		
         $v = Validator::make($data, $rules, $messages);

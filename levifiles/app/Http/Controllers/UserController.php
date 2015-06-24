@@ -11,12 +11,12 @@ class Usercontroller extends Controller {
 
 	public function getIndex()
 	{
-		return view('user.user-browse', array('data' => 'bebek'));
+		return view('user.user-browse', array('page' => 'user'));
 	}
 
-	public function getPassengers()
+	public function getDetailUser()
 	{
-		return view('user.user-browse', array('data' => 'bebek'));
+		return view('user.user-detail', array('page' => 'detail'));
 	}
 
 	public function getTampil(){
@@ -24,47 +24,6 @@ class Usercontroller extends Controller {
 
 		$uuid = Uuid::generate(4);
 		echo $uuid;
-	}
-
-	public function postSave(){
-
-		$data = Input::all();
-		$user = new User();
-		$errorBag = $user->rules($data);
-		
-		if(count($errorBag) > 0){
-			return redirect('main/register')
-				->withInput(Request::except('Password', 'RePassword'))
-				->with('errors', $errorBag);	
-		} else {
-
-			$userCode = User::where('UserCode' , '=', $data['UserCode'])->first();
-			$userMail = User::where('Email' , '=', $data['Email'])->first();
-			if($userCode != null){
-				
-				return redirect('main/register')
-				->withInput(Request::except('Password', 'RePassword'))
-				->with('errors', array('BoardingPassKu dengan ID <b>'.$data['UserCode'].'</b> telah digunakan'));
-
-			} else if($userMail != null) {
-
-				return redirect('main/register')
-				->withInput(Request::except('Password', 'RePassword'))
-				->with('errors', array('BoardingPassKu dengan Email <b>'.$data['Email'].'</b> telah digunakan'));
-
-			}
-
-			$user = new User();
-			$user->UserCode = $data['UserCode'];
-			$user->Password = Hash::make($data['Password']);
-			$user->Email = $data['Email'];
-			$user->save();
-
-			return redirect('main/success');
-		}
-
-		
-		// print_r($errorBag);
 	}
 
 
