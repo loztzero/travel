@@ -5,7 +5,7 @@
 # Project name:                                                          #
 # Author:                                                                #
 # Script type:           Database creation script                        #
-# Created on:            2015-06-24 22:17                                #
+# Created on:            2015-06-25 20:42                                #
 # ---------------------------------------------------------------------- #
 
 
@@ -120,6 +120,53 @@ CREATE TABLE `MST020` (
 db engine = inno db;
 
 # ---------------------------------------------------------------------- #
+# Add table "BLNC001"                                                    #
+# ---------------------------------------------------------------------- #
+
+CREATE TABLE `BLNC001` (
+    `id` VARCHAR(100) NOT NULL,
+    `booking_type` VARCHAR(40) NOT NULL COMMENT 'Hotel/psawat',
+    `booking_date` DATE NOT NULL,
+    `booking_number` VARCHAR(40) NOT NULL,
+    `mst003_id` VARCHAR(100) NOT NULL,
+    `mst020_id` VARCHAR(100) NOT NULL,
+    `pymnt_type` VARCHAR(40) NOT NULL COMMENT 'cc/transfer',
+    `card_type` VARCHAR(40) COMMENT 'visa/master',
+    `card_number` VARCHAR(40) COMMENT 'nomor cc',
+    `card_expired_date` VARCHAR(40) COMMENT 'tgl expired date',
+    `pymnt` DOUBLE(30,10),
+    `charged_pymnt` DOUBLE(30,10),
+    `tot_pymnt` DOUBLE(30,10) NOT NULL,
+    `pymnt_flg` VARCHAR(40) NOT NULL,
+    `issued_flg` VARCHAR(40) NOT NULL,
+    `description` VARCHAR(1024),
+    `updated_at` TIMESTAMP NOT NULL,
+    `created_at` TIMESTAMP NOT NULL,
+    CONSTRAINT `PK_BLNC001` PRIMARY KEY (`id`),
+    CONSTRAINT `TUC_BLNC001_1` UNIQUE (`booking_number`, `booking_date`, `booking_type`)
+)
+db engine = inno db;
+
+# ---------------------------------------------------------------------- #
+# Add table "BLNC002"                                                    #
+# ---------------------------------------------------------------------- #
+
+CREATE TABLE `BLNC002` (
+    `id` VARCHAR(100) NOT NULL,
+    `line_number` INTEGER(5) NOT NULL,
+    `blnc001_id` VARCHAR(100) NOT NULL COMMENT 'Hotel/psawat',
+    `mst002_id` VARCHAR(100) NOT NULL,
+    `flight_code` VARCHAR(40) NOT NULL,
+    `pymnt_val` DOUBLE(30,10) NOT NULL,
+    `description` VARCHAR(1024),
+    `updated_at` TIMESTAMP NOT NULL,
+    `created_at` TIMESTAMP NOT NULL,
+    CONSTRAINT `PK_BLNC002` PRIMARY KEY (`id`),
+    CONSTRAINT `TUC_BLNC002_1` UNIQUE (`line_number`, `blnc001_id`)
+)
+db engine = inno db;
+
+# ---------------------------------------------------------------------- #
 # Add table "BKTRX001"                                                   #
 # ---------------------------------------------------------------------- #
 
@@ -184,4 +231,16 @@ ALTER TABLE `BKTRX002` ADD CONSTRAINT `BKTRX001_BKTRX002`
     FOREIGN KEY (`bktrx001_id`) REFERENCES `BKTRX001` (`id`);
 
 ALTER TABLE `BKTRX002` ADD CONSTRAINT `MST002_BKTRX002` 
+    FOREIGN KEY (`mst002_id`) REFERENCES `MST002` (`id`);
+
+ALTER TABLE `BLNC001` ADD CONSTRAINT `MST003_BLNC001` 
+    FOREIGN KEY (`mst003_id`) REFERENCES `MST003` (`id`);
+
+ALTER TABLE `BLNC001` ADD CONSTRAINT `MST020_BLNC001` 
+    FOREIGN KEY (`mst020_id`) REFERENCES `MST020` (`id`);
+
+ALTER TABLE `BLNC002` ADD CONSTRAINT `BLNC001_BLNC002` 
+    FOREIGN KEY (`blnc001_id`) REFERENCES `BLNC001` (`id`);
+
+ALTER TABLE `BLNC002` ADD CONSTRAINT `MST002_BLNC002` 
     FOREIGN KEY (`mst002_id`) REFERENCES `MST002` (`id`);
