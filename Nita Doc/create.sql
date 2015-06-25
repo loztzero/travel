@@ -5,7 +5,7 @@
 # Project name:                                                          #
 # Author:                                                                #
 # Script type:           Database creation script                        #
-# Created on:            2015-06-25 20:42                                #
+# Created on:            2015-06-25 20:48                                #
 # ---------------------------------------------------------------------- #
 
 
@@ -125,9 +125,9 @@ db engine = inno db;
 
 CREATE TABLE `BLNC001` (
     `id` VARCHAR(100) NOT NULL,
-    `booking_type` VARCHAR(40) NOT NULL COMMENT 'Hotel/psawat',
-    `booking_date` DATE NOT NULL,
-    `booking_number` VARCHAR(40) NOT NULL,
+    `order_type` VARCHAR(40) NOT NULL COMMENT 'Hotel/psawat',
+    `order_date` DATE NOT NULL,
+    `order_number` VARCHAR(40) NOT NULL,
     `mst003_id` VARCHAR(100) NOT NULL,
     `mst020_id` VARCHAR(100) NOT NULL,
     `pymnt_type` VARCHAR(40) NOT NULL COMMENT 'cc/transfer',
@@ -139,11 +139,12 @@ CREATE TABLE `BLNC001` (
     `tot_pymnt` DOUBLE(30,10) NOT NULL,
     `pymnt_flg` VARCHAR(40) NOT NULL,
     `issued_flg` VARCHAR(40) NOT NULL,
+    `booking_code` VARCHAR(40),
     `description` VARCHAR(1024),
     `updated_at` TIMESTAMP NOT NULL,
     `created_at` TIMESTAMP NOT NULL,
     CONSTRAINT `PK_BLNC001` PRIMARY KEY (`id`),
-    CONSTRAINT `TUC_BLNC001_1` UNIQUE (`booking_number`, `booking_date`, `booking_type`)
+    CONSTRAINT `TUC_BLNC001_1` UNIQUE (`order_number`, `order_date`, `order_type`)
 )
 db engine = inno db;
 
@@ -172,9 +173,9 @@ db engine = inno db;
 
 CREATE TABLE `BKTRX001` (
     `id` VARCHAR(100) NOT NULL,
-    `booking_type` VARCHAR(40) NOT NULL COMMENT 'Hotel/psawat',
-    `booking_date` DATE NOT NULL,
-    `booking_number` VARCHAR(40) NOT NULL,
+    `order_type` VARCHAR(40) NOT NULL COMMENT 'Hotel/psawat',
+    `order_date` DATE NOT NULL,
+    `order_number` VARCHAR(40) NOT NULL,
     `mst003_id` VARCHAR(100) NOT NULL,
     `mst020_id` VARCHAR(100) NOT NULL,
     `pymnt_type` VARCHAR(40) NOT NULL COMMENT 'cc/transfer',
@@ -188,7 +189,7 @@ CREATE TABLE `BKTRX001` (
     `updated_at` TIMESTAMP NOT NULL,
     `created_at` TIMESTAMP NOT NULL,
     CONSTRAINT `PK_BKTRX001` PRIMARY KEY (`id`),
-    CONSTRAINT `TUC_BKTRX001_1` UNIQUE (`booking_number`, `booking_date`, `booking_type`)
+    CONSTRAINT `TUC_BKTRX001_1` UNIQUE (`order_number`, `order_date`, `order_type`)
 )
 db engine = inno db;
 
