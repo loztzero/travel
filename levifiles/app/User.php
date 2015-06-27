@@ -7,8 +7,8 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Validator;
 use App\Libraries\Helpers;
-use Uuid;
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
+use App\Emodel;
+class User extends Emodel implements AuthenticatableContract, CanResetPasswordContract {
 
 	use Authenticatable, CanResetPassword;
 
@@ -33,20 +33,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 */
 	protected $hidden = ['password', 'remember_token'];
 
-	public static function boot()
-    {
-        parent::boot();
-
-        // static::creating(function($post)
-        // {
-        //     $post->id = Helpers::mysqlID();;
-        // });
-
-        static::creating(function ($model) {
-            $model->{$model->getKeyName()} = (string)$model->generateNewId();
-        });
-
-    }
+	
 
 	public static function rules($data)
 	{
@@ -73,9 +60,6 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 		return $error;
 	}
 
-	public function generateNewId()
-    {
-        return Uuid::generate(4);
-    }
+	
 
 }

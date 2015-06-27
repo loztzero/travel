@@ -59,6 +59,7 @@
 </body>
 <script src="{{App::make('url')->to('/')}}/assets/js/angular-latest.js"></script>
 <script src="{{App::make('url')->to('/')}}/assets/js/angular-sanitize.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.2.15/angular-locale_id-id.js"></script> -->
 <script src="{{App::make('url')->to('/')}}/assets/js/jquery.js"></script>
 <script src="{{App::make('url')->to('/')}}/assets/js/bootstrap.js"></script>
 <script src="{{App::make('url')->to('/')}}/assets/js/ui-bootstrap-tpls-0.13.0.js"></script>

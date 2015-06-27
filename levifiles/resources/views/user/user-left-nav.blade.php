@@ -9,7 +9,7 @@
 		@if($page == 'detail')
 		<li class="list-group-item active">Data Penumpang</li>
 		@else
-		<li class="list-group-item"><a href="{{App::make('url')->to('/user/detail-user')}}">Data Penumpang</a></li>
+		<li class="list-group-item"><a href="{{App::make('url')->to('/user/passenger-list')}}">Data Penumpang</a></li>
 		@endif
 
 		
