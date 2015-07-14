@@ -8,9 +8,13 @@ use App\Models\Passenger;
 use App\Libraries\Helpers;
 class Samplecontroller extends Controller {
 
-	public function getIndex()
-	{
-		return view('layouts.frontpage');
+	public function getIndex(){
+		return view('sample.sample-browse');
+	}
+
+	public function postSave(){
+		$data = Input::all();
+		print_r($data);
 	}
 
 }
