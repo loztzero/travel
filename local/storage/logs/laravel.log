@@ -257,3 +257,32 @@ Stack trace:
 [2015-07-09 14:40:27] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Excel' not found' in D:\xampp2\htdocs\levi-lts\local\app\Http\routes.php:29
 Stack trace:
 #0 {main}  
+[2015-07-14 00:47:27] local.ERROR: exception 'ReflectionException' with message 'Class App\Http\Controllers\MainController does not exist' in D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Routing\ControllerInspector.php:32
+Stack trace:
+#0 D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Routing\ControllerInspector.php(32): ReflectionClass->__construct('App\\Http\\Contro...')
+#1 D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Routing\Router.php(255): Illuminate\Routing\ControllerInspector->getRoutable('App\\Http\\Contro...', 'main')
+#2 D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(213): Illuminate\Routing\Router->controller('main', 'MainController')
+#3 D:\xampp2\htdocs\timetravel\local\app\Http\routes.php(14): Illuminate\Support\Facades\Facade::__callStatic('controller', Array)
+#4 D:\xampp2\htdocs\timetravel\local\app\Http\routes.php(14): Illuminate\Support\Facades\Route::controller('main', 'MainController')
+#5 D:\xampp2\htdocs\timetravel\local\app\Providers\RouteServiceProvider.php(41): require('D:\\xampp2\\htdoc...')
+#6 [internal function]: App\Providers\RouteServiceProvider->App\Providers\{closure}(Object(Illuminate\Routing\Router))
+#7 D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Routing\Router.php(350): call_user_func(Object(Closure), Object(Illuminate\Routing\Router))
+#8 D:\xampp2\htdocs\timetravel\local\app\Providers\RouteServiceProvider.php(42): Illuminate\Routing\Router->group(Array, Object(Closure))
+#9 [internal function]: App\Providers\RouteServiceProvider->map(Object(Illuminate\Routing\Router))
+#10 D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Container\Container.php(502): call_user_func_array(Array, Array)
+#11 D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Foundation\Support\Providers\RouteServiceProvider.php(68): Illuminate\Container\Container->call(Array)
+#12 D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Foundation\Support\Providers\RouteServiceProvider.php(30): Illuminate\Foundation\Support\Providers\RouteServiceProvider->loadRoutes()
+#13 D:\xampp2\htdocs\timetravel\local\app\Providers\RouteServiceProvider.php(29): Illuminate\Foundation\Support\Providers\RouteServiceProvider->boot(Object(Illuminate\Routing\Router))
+#14 [internal function]: App\Providers\RouteServiceProvider->boot(Object(Illuminate\Routing\Router))
+#15 D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Container\Container.php(502): call_user_func_array(Array, Array)
+#16 D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(734): Illuminate\Container\Container->call(Array)
+#17 D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(717): Illuminate\Foundation\Application->bootProvider(Object(App\Providers\RouteServiceProvider))
+#18 [internal function]: Illuminate\Foundation\Application->Illuminate\Foundation\{closure}(Object(App\Providers\RouteServiceProvider), 18)
+#19 D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(718): array_walk(Array, Object(Closure))
+#20 D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Foundation\Bootstrap\BootProviders.php(17): Illuminate\Foundation\Application->boot()
+#21 D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(203): Illuminate\Foundation\Bootstrap\BootProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#22 D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(215): Illuminate\Foundation\Application->bootstrapWith(Array)
+#23 D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(110): Illuminate\Foundation\Http\Kernel->bootstrap()
+#24 D:\xampp2\htdocs\timetravel\local\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(86): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#25 D:\xampp2\htdocs\timetravel\index.php(55): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#26 {main}  
