@@ -17,7 +17,7 @@ class User extends Emodel implements AuthenticatableContract, CanResetPasswordCo
 	 *
 	 * @var string
 	 */
-	protected $table = 'mst001';
+	protected $table = 'MST001';
 
 	/**
 	 * The attributes that are mass assignable.

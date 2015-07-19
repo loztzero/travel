@@ -25,7 +25,7 @@ class Usercontroller extends Controller {
 
 		$data = Input::all();
 		$userDetail = new UserDetail();
-		if(isset($data['id'])){
+		if(isset($data['id']) && $data['id'] != null && $data['id'] != '' ){
 
 			$userDetail = UserDetail::find($data['id']);
 
@@ -57,7 +57,7 @@ class Usercontroller extends Controller {
 
 		$data = Input::all();
 		$passenger = new Passenger();
-		if(isset($data['id'])){
+		if(isset($data['id'])  && $data['id'] != null && $data['id'] != '' ){
 
 			$passenger = Passenger::find($data['id']);
 

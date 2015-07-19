@@ -15,7 +15,7 @@ Route::filter('auth', function($route, $request)
     // Login check (Default)
     if (Auth::guest()) return Redirect::guest('/main');
 
-});
+})
 
 Route::group(array('before' => 'auth'), function(){
 	Route::controller('user', 'UserController');

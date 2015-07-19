@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 use Input;
 use App\Emodel;
 class UserDetail extends Emodel {
-	protected $table = 'mst003';
+	protected $table = 'MST003';
 
 	public function doParams($model, $data)
 	{

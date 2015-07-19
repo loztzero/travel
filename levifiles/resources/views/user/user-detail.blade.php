@@ -36,7 +36,6 @@
 
 		<hr>
 
-		@{{field}}
 		<h3>Input / Ubah Data Penumpang</h3>
 		<form action="save-passenger" method="post">
 			 <input type="hidden" name="_token" value="{{ csrf_token() }}">

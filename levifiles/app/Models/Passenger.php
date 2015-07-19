@@ -5,7 +5,7 @@ use Input;
 use DateTime;
 use App\Emodel;
 class Passenger extends Emodel {
-	protected $table = 'mst002';
+	protected $table = 'MST002';
 
 	public function doParams($model, $data)
 	{

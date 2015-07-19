@@ -36,7 +36,7 @@ class MainController extends Controller {
 
 				return redirect('main/register')
 				->withInput(Request::except('password', 'repassword'))
-				->with('errors', array('BoardingPassKu dengan Email <b>'.$data['Email'].'</b> telah digunakan'));
+				->with('errors', array('BoardingPassKu dengan Email <b>'.$data['email'].'</b> telah digunakan'));
 
 			}
 
