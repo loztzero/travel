@@ -21,13 +21,15 @@
       <td>
         <div>
           <form action="{{URL::to('sample/load-data')}}" method="post" style="float:left;">
-            <input type="hidden" value="{{$value->ID}}" name="ID">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input type="hidden" value="{{$value->id}}" name="ID">
             <button class="btn-floating btn-small waves-effect waves-light blue" type="submit">
               <i class="material-icons left">mode_edit</i>
             </button>
           </form>
-          <form action="{{URL::to('formula-nilai-akhir/delete')}}" method="post" style="float:right;">  
-            <input type="hidden" value="{{$value->ID}}" name="ID">
+          <form action="{{URL::to('formula-nilai-akhir/delete')}}" method="post" style="float:right;">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input type="hidden" value="{{$value->id}}" name="ID">
              <button class="btn-floating btn-small waves-effect waves-light red" type="submit">
               <i class="material-icons left">delete</i>
             </button>

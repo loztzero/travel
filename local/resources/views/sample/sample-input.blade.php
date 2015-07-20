@@ -9,16 +9,17 @@
 <div class="row">
   <form class="col s12" action="save" method="post">
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
+  <input type="hidden" name="id" value="{{Input::old('id')}}">
     <div class="row">
       <div class="input-field col s12">
-        <input placeholder="Field 1" id="field1" type="text" class="validate" name="field1">
+        <input placeholder="Field 1" id="field1" type="text" class="validate" name="field1" value="{{ Input::old('field1') }}">
         <label for="field1">Field1</label>
       </div>
 
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input placeholder="Field 1" id="field1" type="text" class="validate" name="field2">
+        <input placeholder="Field 1" id="field1" type="text" class="validate" name="field2" value="{{ Input::old('field2') }}">
         <label for="field2">Field2</label>
       </div>
     </div>
@@ -36,19 +37,19 @@
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
-    	@{{field}}
       <form class="col s12" action="sample/save" method="post">
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="id" value="{{Input::old('id')}}">
 	    <div class="row">
 	      <div class="input-field col s12">
-	        <input placeholder="Field 1" id="field1" type="text" class="validate" name="field1" ng-model="field.field1">
+	        <input placeholder="Field 1" id="field1" type="text" class="validate" name="field1" value="{{ Input::old('field1') }}">
 	        <label for="field1">Field1</label>
 	      </div>
 
 	    </div>
 	    <div class="row">
 	      <div class="input-field col s12">
-	        <input placeholder="Field 1" id="field1" type="text" class="validate" name="field2" ng-model="field.field2">
+	        <input placeholder="Field 1" id="field2" type="text" class="validate" name="field2" value="{{ Input::old('field2') }}">
 	        <label for="field2">Field2</label>
 	      </div>
 	    </div>
