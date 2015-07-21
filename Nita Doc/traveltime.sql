@@ -5,7 +5,7 @@
 # Project name:                                                          #
 # Author:                                                                #
 # Script type:           Database creation script                        #
-# Created on:            2015-07-07 20:30                                #
+# Created on:            2015-07-21 21:54                                #
 # ---------------------------------------------------------------------- #
 
 
@@ -118,7 +118,7 @@ db engine = inno db;
 CREATE TABLE `VST030` (
     `id` VARCHAR(100) NOT NULL,
     `vst001_id` VARCHAR(100) NOT NULL,
-    `line number` DOUBLE(5,0) NOT NULL,
+    `line number` INTEGER NOT NULL,
     `description` VARCHAR(1024) NOT NULL,
     `updated_at` TIMESTAMP NOT NULL,
     `created_at` TIMESTAMP NOT NULL,
@@ -135,12 +135,13 @@ CREATE TABLE `TR0020` (
     `id` VARCHAR(100) NOT NULL,
     `tr001_id` VARCHAR(100) NOT NULL,
     `vst001_id` VARCHAR(100) NOT NULL,
+    `line_number` INTEGER(5) NOT NULL,
     `review` VARCHAR(1024) NOT NULL,
     `range` DOUBLE,
     `updated_at` TIMESTAMP NOT NULL,
     `created_at` TIMESTAMP NOT NULL,
     CONSTRAINT `PK_TR0020` PRIMARY KEY (`id`),
-    CONSTRAINT `TUC_TR0020_1` UNIQUE (`tr001_id`, `vst001_id`, `review`)
+    CONSTRAINT `TUC_TR0020_1` UNIQUE (`tr001_id`, `vst001_id`, `line_number`)
 )
 db engine = inno db;
 
