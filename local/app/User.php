@@ -17,7 +17,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      *
      * @var string
      */
-    protected $table = 'users';
+    protected $table = 'MST001';
 
     /**
      * The attributes that are mass assignable.
@@ -32,4 +32,37 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    public static function rules($data)
+    {
+        $error = array();
+        $rules = array(
+            'email'         => 'required|email',
+            'password'      => 'required|min:6',
+            'repassword'    => 'required|same:password'
+        );
+
+        $messages = array(
+            'password.required'     => 'Sandi harus diisi',
+            'password.min'          => 'Sandi minimal harus :min karakter',
+            'repassword.required'   => 'Konfirmasi sandi harus diisi',
+            'repassword.same'       => 'Konfirmasi sandi harus bernilai sama dengan sandi',
+            'email.required'        => 'Email harus diisi'
+        );
+        
+        $v = Validator::make($data, $rules, $messages);
+        if($v->fails()){
+            $error = $v->errors()->all();
+        }
+
+        return $error;
+    }
+
+    public function doParams($object, $data)
+    {
+        $user->password = Hash::make($data['password']);
+        $user->email = $data['email'];
+        $user->role = $data['role'];
+        return $object;
+    }
 }
