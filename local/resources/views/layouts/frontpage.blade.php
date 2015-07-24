@@ -27,7 +27,7 @@
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Login</a></li>
-        <li><a href="#">Register</a></li>
+        <li><a href="http://myjourneytime.com/main/register">Register</a></li>
         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
 
