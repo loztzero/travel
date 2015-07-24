@@ -5,7 +5,7 @@
 # Project name:                                                          #
 # Author:                                                                #
 # Script type:           Database creation script                        #
-# Created on:            2015-07-24 19:08                                #
+# Created on:            2015-07-24 19:19                                #
 # ---------------------------------------------------------------------- #
 
 
@@ -28,7 +28,7 @@ CREATE TABLE `MST001` (
     CONSTRAINT `PK_MST001` PRIMARY KEY (`id`),
     CONSTRAINT `TUC_MST001_1` UNIQUE (`email`)
 )
-db engine = inno db;
+ENGINE=InnoDB;;
 
 # ---------------------------------------------------------------------- #
 # Add table "VST001"                                                     #
@@ -50,7 +50,7 @@ CREATE TABLE `VST001` (
     CONSTRAINT `PK_VST001` PRIMARY KEY (`id`),
     CONSTRAINT `TUC_VST001_1` UNIQUE (`mst001_id`)
 )
-db engine = inno db;
+ENGINE=InnoDB;;
 
 # ---------------------------------------------------------------------- #
 # Add table "TR0010"                                                     #
@@ -78,7 +78,7 @@ CREATE TABLE `TR0010` (
     CONSTRAINT `PK_TR0010` PRIMARY KEY (`id`),
     CONSTRAINT `TUC_TR0010_1` UNIQUE (`mst001_id`)
 )
-db engine = inno db;
+ENGINE=InnoDB;;
 
 # ---------------------------------------------------------------------- #
 # Add table "VST010"                                                     #
@@ -93,7 +93,7 @@ CREATE TABLE `VST010` (
     CONSTRAINT `PK_VST010` PRIMARY KEY (`id`),
     CONSTRAINT `TUC_VST010_1` UNIQUE (`vst001_id`, `tr001_id`)
 )
-db engine = inno db;
+ENGINE=InnoDB;;
 
 # ---------------------------------------------------------------------- #
 # Add table "VST020"                                                     #
@@ -110,7 +110,7 @@ CREATE TABLE `VST020` (
     CONSTRAINT `PK_VST020` PRIMARY KEY (`id`),
     CONSTRAINT `TUC_VST020_1` UNIQUE (`vst001_id`, `line_number`)
 )
-db engine = inno db;
+ENGINE=InnoDB;;
 
 # ---------------------------------------------------------------------- #
 # Add table "VST030"                                                     #
@@ -126,7 +126,7 @@ CREATE TABLE `VST030` (
     CONSTRAINT `PK_VST030` PRIMARY KEY (`id`),
     CONSTRAINT `TUC_VST030_1` UNIQUE (`vst001_id`, `line_number`)
 )
-db engine = inno db;
+ENGINE=InnoDB;;
 
 # ---------------------------------------------------------------------- #
 # Add table "TR0020"                                                     #
@@ -144,7 +144,7 @@ CREATE TABLE `TR0020` (
     CONSTRAINT `PK_TR0020` PRIMARY KEY (`id`),
     CONSTRAINT `TUC_TR0020_1` UNIQUE (`tr001_id`, `vst001_id`, `line_number`)
 )
-db engine = inno db;
+ENGINE=InnoDB;;
 
 # ---------------------------------------------------------------------- #
 # Add table "TR0030"                                                     #
@@ -161,7 +161,7 @@ CREATE TABLE `TR0030` (
     CONSTRAINT `PK_TR0030` PRIMARY KEY (`id`),
     CONSTRAINT `TUC_TR0030_1` UNIQUE (`tr001_id`, `line_number`)
 )
-db engine = inno db;
+ENGINE=InnoDB;;
 
 # ---------------------------------------------------------------------- #
 # Add table "TR0040"                                                     #
@@ -178,7 +178,7 @@ CREATE TABLE `TR0040` (
     CONSTRAINT `PK_TR0040` PRIMARY KEY (`id`),
     CONSTRAINT `TUC_TR0040_1` UNIQUE (`tr001_id`, `line_number`)
 )
-db engine = inno db;
+ENGINE=InnoDB;;
 
 # ---------------------------------------------------------------------- #
 # Foreign key constraints                                                #
