@@ -1,5 +1,0 @@
-[2015-05-06 12:24:32] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Maximum execution time of 30 seconds exceeded' in D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php:14776
-Stack trace:
-#0 D:\xampp2\htdocs\levi-master\levifiles\storage\framework\compiled.php(1721): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError(Array)
-#1 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
-#2 {main}  
