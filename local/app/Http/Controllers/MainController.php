@@ -53,4 +53,9 @@ class MainController extends Controller {
 		// print_r($errorBag);
 	}
 
+	public function getSuccess(){
+		return view('main.main-register-success');
+	}
+
+
 }
