@@ -28,7 +28,7 @@ class MainController extends Controller {
 		if(count($errorBag) > 0){
 			return redirect('main/register')
 				->withInput(Request::except('password', 'repassword'))
-				->with('errors', $errorBag);	
+				->with('error', $errorBag);	
 		} else {
 
 			$userMail = User::where('email' , '=', $data['email'])->first();
@@ -36,7 +36,7 @@ class MainController extends Controller {
 
 				return redirect('main/register')
 				->withInput(Request::except('password', 'repassword'))
-				->with('errors', array('BoardingPassKu dengan Email <b>'.$data['email'].'</b> telah digunakan'));
+				->with('errors', array('Time travel <b>'.$data['email'].'</b> telah digunakan'));
 
 			}
 
@@ -51,47 +51,6 @@ class MainController extends Controller {
 
 		
 		// print_r($errorBag);
-	}
-
-	public function getLogin()
-	{
-		if(Auth::check()){
-			return Redirect::to('/main');
-		} else {
-			return view('login.login-input');
-		}
-	}
-
-	public function getLogout()
-	{
-		Auth::logout();
-		return view('login.logout');
-	}
-
-	public function getSuccess(){
-		return view('login.success');
-	}
-
-	public function postValidateRegister(){
-		print_r(Input::all());
-	}
-
-
-	//untuk user login
-	public function postCheck(){
-		
-		$userdata = array(
-			'email' => Input::get('email'),
-			'password' => Input::get('password')
-		);
-
-		if(Auth::attempt($userdata)){
-			return Redirect::to('/main');
-		} else {
-			Session::flash('error', 'Email atau password salah');
-			return Redirect::to('main/login');
-		}
-
 	}
 
 }

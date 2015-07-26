@@ -13,6 +13,7 @@
 
 Route::controller('sample', 'SampleController');
 Route::controller('main', 'MainController');
+Route::controller('user', 'UserController');
 
 Route::get('/', function () {
     return view('welcome');

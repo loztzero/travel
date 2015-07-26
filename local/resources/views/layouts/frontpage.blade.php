@@ -26,13 +26,19 @@
 
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Login</a></li>
-        <li><a href="http://myjourneytime.com/main/register">Register</a></li>
+        @if(Auth::check())
+          <li>Welcome {{Auth::user()->email}}</li>
+          <li><a href="{{App::make('url')->to('/user/logout')}}">Logout</a></li>
+        @else
+          <li><a class="modal-trigger" href="#loginModal">Login</a></li>
+          <li><a href="{{App::make('url')->to('/')}}/main/register">Register</a></li>
+        @endif
         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a class="modal-trigger" href="#loginModal">Login</a></li>
+        <li><a href="{{App::make('url')->to('/')}}/main/register">Register</a></li>
       </ul>
       
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -44,6 +50,8 @@
     @yield('content')
   </div>
 
+  @include('layouts.user-login-modal')
+
 </body>
 <script src="{{App::make('url')->to('/')}}/assets/js/angular.js"></script>
 <script src="{{App::make('url')->to('/')}}/assets/js/angular-sanitize.js"></script>
@@ -52,6 +60,15 @@
 <script type="text/javascript">
 $(document).ready(function() {
   $('.modal-trigger').leanModal();
+
+  $('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 240
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    }
+  );
+
+
 });
 </script>
 @yield('script')
