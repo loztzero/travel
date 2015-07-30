@@ -5,7 +5,7 @@
 # Project name:                                                          #
 # Author:                                                                #
 # Script type:           Database creation script                        #
-# Created on:            2015-07-24 19:19                                #
+# Created on:            2015-07-30 22:38                                #
 # ---------------------------------------------------------------------- #
 
 
@@ -45,6 +45,7 @@ CREATE TABLE `VST001` (
     `zip_code` VARCHAR(15),
     `phone_number` VARCHAR(40) NOT NULL,
     `photo` VARCHAR(100),
+    `new_letter_flg` VARCHAR(100) NOT NULL,
     `updated_at` TIMESTAMP NOT NULL,
     `created_at` TIMESTAMP NOT NULL,
     CONSTRAINT `PK_VST001` PRIMARY KEY (`id`),
@@ -59,7 +60,6 @@ ENGINE=InnoDB;;
 CREATE TABLE `TR0010` (
     `id` VARCHAR(100) NOT NULL,
     `mst001_id` VARCHAR(100) NOT NULL,
-    `category` VARCHAR(40) NOT NULL,
     `tour_name` VARCHAR(100) NOT NULL,
     `address1` VARCHAR(100) NOT NULL,
     `address2` VARCHAR(100),
@@ -171,6 +171,9 @@ CREATE TABLE `TR0040` (
     `id` VARCHAR(100) NOT NULL,
     `tr001_id` VARCHAR(100) NOT NULL,
     `line_number` DOUBLE(5,0) NOT NULL,
+    `category` VARCHAR(40) NOT NULL,
+    `currency` VARCHAR(40) NOT NULL,
+    `price` VARCHAR(40) NOT NULL,
     `description` VARCHAR(1024) NOT NULL,
     `photo` VARCHAR(100),
     `updated_at` TIMESTAMP NOT NULL,
