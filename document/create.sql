@@ -5,7 +5,7 @@
 # Project name:                                                          #
 # Author:                                                                #
 # Script type:           Database creation script                        #
-# Created on:            2015-07-30 22:38                                #
+# Created on:            2015-07-30 23:02                                #
 # ---------------------------------------------------------------------- #
 
 
@@ -180,6 +180,52 @@ CREATE TABLE `TR0040` (
     `created_at` TIMESTAMP NOT NULL,
     CONSTRAINT `PK_TR0040` PRIMARY KEY (`id`),
     CONSTRAINT `TUC_TR0040_1` UNIQUE (`tr001_id`, `line_number`)
+)
+ENGINE=InnoDB;;
+
+# ---------------------------------------------------------------------- #
+# Add table "MST002"                                                     #
+# ---------------------------------------------------------------------- #
+
+CREATE TABLE `MST002` (
+    `id` VARCHAR(100) NOT NULL,
+    `country_code` VARCHAR(40) NOT NULL COMMENT 'Email user, sebagai user code',
+    `country_name` VARCHAR(100) NOT NULL,
+    `updated_at` TIMESTAMP NOT NULL,
+    `created_at` TIMESTAMP NOT NULL,
+    CONSTRAINT `PK_MST002` PRIMARY KEY (`id`),
+    CONSTRAINT `TUC_MST002_1` UNIQUE (`country_code`)
+)
+ENGINE=InnoDB;;
+
+# ---------------------------------------------------------------------- #
+# Add table "MST003"                                                     #
+# ---------------------------------------------------------------------- #
+
+CREATE TABLE `MST003` (
+    `id` VARCHAR(100) NOT NULL,
+    `city_kode` VARCHAR(40) NOT NULL,
+    `city_name` VARCHAR(100) NOT NULL,
+    `country_id` VARCHAR(40) NOT NULL COMMENT 'Email user, sebagai user code',
+    `updated_at` TIMESTAMP NOT NULL,
+    `created_at` TIMESTAMP NOT NULL,
+    CONSTRAINT `PK_MST003` PRIMARY KEY (`id`),
+    CONSTRAINT `TUC_MST003_1` UNIQUE (`city_kode`)
+)
+ENGINE=InnoDB;;
+
+# ---------------------------------------------------------------------- #
+# Add table "MST004"                                                     #
+# ---------------------------------------------------------------------- #
+
+CREATE TABLE `MST004` (
+    `id` VARCHAR(100) NOT NULL,
+    `curr_code` VARCHAR(40) NOT NULL,
+    `curr_name` VARCHAR(100) NOT NULL,
+    `updated_at` TIMESTAMP NOT NULL,
+    `created_at` TIMESTAMP NOT NULL,
+    CONSTRAINT `PK_MST004` PRIMARY KEY (`id`),
+    CONSTRAINT `TUC_MST004_1` UNIQUE (`curr_code`)
 )
 ENGINE=InnoDB;;
 
