@@ -5,7 +5,7 @@
 # Project name:                                                          #
 # Author:                                                                #
 # Script type:           Database creation script                        #
-# Created on:            2015-07-30 23:02                                #
+# Created on:            2015-07-30 23:05                                #
 # ---------------------------------------------------------------------- #
 
 
@@ -73,6 +73,8 @@ CREATE TABLE `TR0010` (
     `twitter` VARCHAR(100),
     `website` VARCHAR(100),
     `logo` VARCHAR(100),
+    `view` INTEGER(5) NOT NULL,
+    `love` INTEGER(5) NOT NULL,
     `updated_at` TIMESTAMP NOT NULL,
     `created_at` TIMESTAMP NOT NULL,
     CONSTRAINT `PK_TR0010` PRIMARY KEY (`id`),
