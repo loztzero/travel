@@ -5,7 +5,7 @@
 # Project name:                                                          #
 # Author:                                                                #
 # Script type:           Database creation script                        #
-# Created on:            2015-07-30 23:05                                #
+# Created on:            2015-08-01 14:37                                #
 # ---------------------------------------------------------------------- #
 
 
@@ -61,6 +61,8 @@ CREATE TABLE `TR0010` (
     `id` VARCHAR(100) NOT NULL,
     `mst001_id` VARCHAR(100) NOT NULL,
     `tour_name` VARCHAR(100) NOT NULL,
+    `first_name` VARCHAR(100) NOT NULL,
+    `last_name` VARCHAR(100) NOT NULL,
     `address1` VARCHAR(100) NOT NULL,
     `address2` VARCHAR(100),
     `address3` VARCHAR(100),
