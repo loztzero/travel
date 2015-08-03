@@ -5,7 +5,7 @@
 			<input type="hidden" name="_token" value="{{{ csrf_token() }}}">
 			<div class="row">
 				<div class="input-field col s12">
-					<input placeholder="Email" id="email" type="text" class="validate" name="email">
+					<input placeholder="Email" id="email" type="text" class="validate" name="email" focus>
 					<label for="email">Email</label>
 				</div>
 

@@ -12,6 +12,7 @@
 */
 
 Route::controller('sample', 'SampleController');
+Route::controller('sample-upload', 'SampleUploadController');
 Route::controller('main', 'MainController');
 Route::controller('user', 'UserController');
 

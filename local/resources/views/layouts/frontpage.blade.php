@@ -18,22 +18,27 @@
 <body>
 <nav class="light-blue lighten-1" role="navigation">
     <ul id="dropdown1" class="dropdown-content">
-      <li><a href="#!">sample</a></li>
-      <li><a href="#!">two</a></li>
-      <li class="divider"></li>
-      <li><a href="#!">three</a></li>
+      <li><a href="#" style="font-size:15px;">Profile</a></li>
+      <li><a href="#">My Travel Time</a></li>
+      <li><a href="#">My Trip</a></li>
+      <li><a href="#">My Review</a></li>
+      <li><a href="#">Message</a></li>
     </ul>
 
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
       <ul class="right hide-on-med-and-down">
         @if(Auth::check())
-          <li>Welcome {{Auth::user()->email}}</li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">My Travel Time</a></li>
+          <li><a href="#">My Trip</a></li>
+          <li><a href="#">My Review</a></li>
+          <li><a href="#">Message</a></li>
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">My Menu<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="{{App::make('url')->to('/user/logout')}}">Logout</a></li>
         @else
-          <li><a class="modal-trigger" href="#loginModal">Login</a></li>
+          <li><a class="modal-trigger" href="#loginModal" id="loginNav">Login</a></li>
           <li><a href="{{App::make('url')->to('/')}}/main/register">Register</a></li>
         @endif
-        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
@@ -60,6 +65,10 @@
 <script type="text/javascript">
 $(document).ready(function() {
   $('.modal-trigger').leanModal();
+  $("#loginNav").click(function() {
+    $("#email").focus();
+  });
+
 
   $('.button-collapse').sideNav({
       menuWidth: 300, // Default is 240
