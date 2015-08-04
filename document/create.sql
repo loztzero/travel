@@ -5,7 +5,7 @@
 # Project name:                                                          #
 # Author:                                                                #
 # Script type:           Database creation script                        #
-# Created on:            2015-08-01 14:37                                #
+# Created on:            2015-08-04 21:11                                #
 # ---------------------------------------------------------------------- #
 
 
@@ -37,6 +37,8 @@ ENGINE=InnoDB;;
 CREATE TABLE `VST001` (
     `id` VARCHAR(100) NOT NULL,
     `mst001_id` VARCHAR(100) NOT NULL,
+    `first_name` VARCHAR(100) NOT NULL,
+    `last_name` VARCHAR(40),
     `address1` VARCHAR(100) NOT NULL,
     `address2` VARCHAR(100),
     `address3` VARCHAR(100),
@@ -124,6 +126,7 @@ CREATE TABLE `VST030` (
     `id` VARCHAR(100) NOT NULL,
     `vst001_id` VARCHAR(100) NOT NULL,
     `line_number` INTEGER(5) NOT NULL,
+    `Title` VARCHAR(40) NOT NULL,
     `description` VARCHAR(1024) NOT NULL,
     `updated_at` TIMESTAMP NOT NULL,
     `created_at` TIMESTAMP NOT NULL,
