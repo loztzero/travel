@@ -17,24 +17,15 @@
 </head>
 <body>
 <nav class="light-blue lighten-1" role="navigation">
-    <ul id="dropdown1" class="dropdown-content">
-      <li><a href="#" style="font-size:15px;">Profile</a></li>
-      <li><a href="#">My Travel Time</a></li>
-      <li><a href="#">My Trip</a></li>
-      <li><a href="#">My Review</a></li>
-      <li><a href="#">Message</a></li>
-    </ul>
-
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
       <ul class="right hide-on-med-and-down">
         @if(Auth::check())
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">My Travel Time</a></li>
-          <li><a href="#">My Trip</a></li>
-          <li><a href="#">My Review</a></li>
-          <li><a href="#">Message</a></li>
-          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">My Menu<i class="material-icons right">arrow_drop_down</i></a></li>
-          <li><a href="{{App::make('url')->to('/user/logout')}}">Logout</a></li>
+          <li>
+            Hii {{ Auth::user()->email }}
+          </li>
+          <li>
+            <a href="{{App::make('url')->to('/user/logout')}}">Logout</a>
+          </li>
         @else
           <li><a class="modal-trigger" href="#loginModal" id="loginNav">Login</a></li>
           <li><a href="{{App::make('url')->to('/')}}/main/register">Register</a></li>
@@ -52,7 +43,25 @@
 
   <br>
   <div class="container" ng-controller="MainCtrl">
+
+    @if(Auth::user())
+    <div class="row">
+      <div class="col s3">
+        <div class="collection hide-on-med-and-down" >
+          <a href="#!" class="collection-item active">Profile</a>
+          <a href="#!" class="collection-item">My Travel Time</a>
+          <a href="#!" class="collection-item">My Trip</a>
+          <a href="#!" class="collection-item">My Review</a>
+        </div>
+      </div>
+      <div class="col s12 m9">
+        @yield('content')
+      </div>
+    </div>
+    @else
     @yield('content')
+    @endif
+    
   </div>
 
   @include('layouts.user-login-modal')
