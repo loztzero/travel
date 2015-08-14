@@ -6,19 +6,29 @@ use DateTime;
 use App\Emodel;
 use Validator;
 class TourProfile extends Emodel {
-	protected $table = 'VST001';
+	protected $table = 'TR0010';
 
 	public static function rules($data)
 	{
 		$error = array();
 		$rules = array(
-			'address1'      	=> 'required',
-            'phone_number'      => 'required',
+			'tour_name'		=> 'required',
+			'first_name'	=> 'required',
+			'last_name'		=> 'required',
+            'address1'		=> 'required',
+            'city'			=> 'required',
+            'country'		=> 'required',
+            'phone_number'	=> 'required',
         );
 
 		$messages = array(
-            'address1.required'		=> 'Alamat harus diisi',
-            'phone_number.required'		=> 'Nomor Telepon harus diisi',
+            'tour_name.required'		=> 'Nama Tour harus diisi',
+            'first_name.required'		=> 'First Name harus diisi',
+            'last_name.required'		=> 'Last Name harus diisi',
+            'address1.required'			=> 'Alamat 1 harus diisi',
+            'city.required'				=> 'Kota harus diisi',
+            'country.required'			=> 'Negara harus diisi',
+            'phone_number.required'		=> 'No Telepon harus diisi',
 		);
 		
         $v = Validator::make($data, $rules, $messages);
@@ -31,16 +41,26 @@ class TourProfile extends Emodel {
 
 	public function doParams($object, $data)
 	{
-		$object->address1      = Input::get('address1');
-		$object->address2      = Input::get('address2');
-		$object->address3      = Input::get('address3');
-		$object->city      	   = Input::get('city');
-		$object->country       = Input::get('country');
-		$object->zip_code      = Input::get('zipCode');
-		$object->phone_number  = Input::get('phoneNumber');
-		$object->photo  	   = Input::get('photo');
+		$object->mst001_id		= Auth::user()->id;
+		$object->tour_name		= Input::get('tour_name');
+		$object->first_name		= Input::get('first_name');
+		$object->last_name		= Input::get('last_name');
+		$object->address1		= Input::get('address1');
+		$object->address2		= Input::get('address2');
+		$object->address3		= Input::get('address3');
+		$object->city			= Input::get('city');
+		$object->country		= Input::get('country');
+		$object->zip_code		= Input::get('zip_code');
+		$object->phone_number	= Input::get('phone_number');
+		$object->instagram		= Input::get('instagram');
+		$object->facebook		= Input::get('facebook');
+		$object->twitter		= Input::get('twitter');
+		$object->website		= Input::get('website');
+		$object->logo			= Input::get('logo');
+		$object->view			= Input::get('view');
+		$object->love			= Input::get('love');
+		$object->publish_flag	= Input::get('publish_flag');
 		
 		return $object;
 	}
-
 }
