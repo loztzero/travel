@@ -5,7 +5,7 @@
 # Project name:                                                          #
 # Author:                                                                #
 # Script type:           Database creation script                        #
-# Created on:            2015-08-07 23:14                                #
+# Created on:            2015-08-18 19:36                                #
 # ---------------------------------------------------------------------- #
 
 
@@ -93,12 +93,12 @@ ENGINE=InnoDB;;
 
 CREATE TABLE `VST010` (
     `id` VARCHAR(100) NOT NULL,
-    `vst001_id` VARCHAR(100) NOT NULL,
-    `tr001_id` VARCHAR(100) NOT NULL,
+    `mst001_id` VARCHAR(100) NOT NULL,
+    `tr0010_id` VARCHAR(100) NOT NULL,
     `updated_at` TIMESTAMP NOT NULL,
     `created_at` TIMESTAMP NOT NULL,
     CONSTRAINT `PK_VST010` PRIMARY KEY (`id`),
-    CONSTRAINT `TUC_VST010_1` UNIQUE (`vst001_id`, `tr001_id`)
+    CONSTRAINT `TUC_VST010_1` UNIQUE (`mst001_id`, `tr0010_id`)
 )
 ENGINE=InnoDB;;
 
@@ -108,14 +108,14 @@ ENGINE=InnoDB;;
 
 CREATE TABLE `VST020` (
     `id` VARCHAR(100) NOT NULL,
-    `vst001_id` VARCHAR(100) NOT NULL,
+    `mst001_id` VARCHAR(100) NOT NULL,
     `line_number` INTEGER NOT NULL,
     `photo` VARCHAR(100),
     `title` VARCHAR(100),
     `updated_at` TIMESTAMP NOT NULL,
     `created_at` TIMESTAMP NOT NULL,
     CONSTRAINT `PK_VST020` PRIMARY KEY (`id`),
-    CONSTRAINT `TUC_VST020_1` UNIQUE (`vst001_id`, `line_number`)
+    CONSTRAINT `TUC_VST020_1` UNIQUE (`mst001_id`, `line_number`)
 )
 ENGINE=InnoDB;;
 
@@ -125,14 +125,14 @@ ENGINE=InnoDB;;
 
 CREATE TABLE `VST030` (
     `id` VARCHAR(100) NOT NULL,
-    `vst001_id` VARCHAR(100) NOT NULL,
+    `mst001_id` VARCHAR(100) NOT NULL,
     `line_number` INTEGER(5) NOT NULL,
     `Title` VARCHAR(40) NOT NULL,
     `description` VARCHAR(1024) NOT NULL,
     `updated_at` TIMESTAMP NOT NULL,
     `created_at` TIMESTAMP NOT NULL,
     CONSTRAINT `PK_VST030` PRIMARY KEY (`id`),
-    CONSTRAINT `TUC_VST030_1` UNIQUE (`vst001_id`, `line_number`)
+    CONSTRAINT `TUC_VST030_1` UNIQUE (`mst001_id`, `line_number`)
 )
 ENGINE=InnoDB;;
 
@@ -142,7 +142,7 @@ ENGINE=InnoDB;;
 
 CREATE TABLE `TR0020` (
     `id` VARCHAR(100) NOT NULL,
-    `tr001_id` VARCHAR(100) NOT NULL,
+    `mst001_id` VARCHAR(100) NOT NULL,
     `vst001_id` VARCHAR(100) NOT NULL,
     `line_number` INTEGER(5) NOT NULL,
     `review` VARCHAR(1024) NOT NULL,
@@ -150,7 +150,7 @@ CREATE TABLE `TR0020` (
     `updated_at` TIMESTAMP NOT NULL,
     `created_at` TIMESTAMP NOT NULL,
     CONSTRAINT `PK_TR0020` PRIMARY KEY (`id`),
-    CONSTRAINT `TUC_TR0020_1` UNIQUE (`tr001_id`, `vst001_id`, `line_number`)
+    CONSTRAINT `TUC_TR0020_1` UNIQUE (`mst001_id`, `vst001_id`, `line_number`)
 )
 ENGINE=InnoDB;;
 
@@ -160,14 +160,14 @@ ENGINE=InnoDB;;
 
 CREATE TABLE `TR0030` (
     `id` VARCHAR(100) NOT NULL,
-    `tr001_id` VARCHAR(100) NOT NULL,
+    `mst001_id` VARCHAR(100) NOT NULL,
     `line_number` INTEGER NOT NULL,
     `photo` VARCHAR(40) NOT NULL,
     `title` VARCHAR(100) NOT NULL,
     `updated_at` TIMESTAMP NOT NULL,
     `created_at` TIMESTAMP NOT NULL,
     CONSTRAINT `PK_TR0030` PRIMARY KEY (`id`),
-    CONSTRAINT `TUC_TR0030_1` UNIQUE (`tr001_id`, `line_number`)
+    CONSTRAINT `TUC_TR0030_1` UNIQUE (`mst001_id`, `line_number`)
 )
 ENGINE=InnoDB;;
 
@@ -177,7 +177,7 @@ ENGINE=InnoDB;;
 
 CREATE TABLE `TR0040` (
     `id` VARCHAR(100) NOT NULL,
-    `tr001_id` VARCHAR(100) NOT NULL,
+    `mst001_id` VARCHAR(100) NOT NULL,
     `line_number` DOUBLE(5,0) NOT NULL,
     `category` VARCHAR(40) NOT NULL,
     `currency` VARCHAR(40) NOT NULL,
@@ -187,7 +187,7 @@ CREATE TABLE `TR0040` (
     `updated_at` TIMESTAMP NOT NULL,
     `created_at` TIMESTAMP NOT NULL,
     CONSTRAINT `PK_TR0040` PRIMARY KEY (`id`),
-    CONSTRAINT `TUC_TR0040_1` UNIQUE (`tr001_id`, `line_number`)
+    CONSTRAINT `TUC_TR0040_1` UNIQUE (`mst001_id`, `line_number`)
 )
 ENGINE=InnoDB;;
 
@@ -247,26 +247,26 @@ ALTER TABLE `VST001` ADD CONSTRAINT `MST001_VST001`
 ALTER TABLE `TR0010` ADD CONSTRAINT `MST001_TR0010` 
     FOREIGN KEY (`mst001_id`) REFERENCES `MST001` (`id`);
 
-ALTER TABLE `VST010` ADD CONSTRAINT `VST001_VST010` 
-    FOREIGN KEY (`vst001_id`) REFERENCES `VST001` (`id`);
-
 ALTER TABLE `VST010` ADD CONSTRAINT `TR0010_VST010` 
-    FOREIGN KEY (`tr001_id`) REFERENCES `TR0010` (`id`);
+    FOREIGN KEY (`tr0010_id`) REFERENCES `TR0010` (`id`);
 
-ALTER TABLE `VST020` ADD CONSTRAINT `VST001_VST020` 
-    FOREIGN KEY (`vst001_id`) REFERENCES `VST001` (`id`);
+ALTER TABLE `VST010` ADD CONSTRAINT `MST001_VST010` 
+    FOREIGN KEY (`mst001_id`) REFERENCES `MST001` (`id`);
 
-ALTER TABLE `VST030` ADD CONSTRAINT `VST001_VST030` 
-    FOREIGN KEY (`vst001_id`) REFERENCES `VST001` (`id`);
+ALTER TABLE `VST020` ADD CONSTRAINT `MST001_VST020` 
+    FOREIGN KEY (`mst001_id`) REFERENCES `MST001` (`id`);
 
-ALTER TABLE `TR0020` ADD CONSTRAINT `TR0010_TR0020` 
-    FOREIGN KEY (`tr001_id`) REFERENCES `TR0010` (`id`);
+ALTER TABLE `VST030` ADD CONSTRAINT `MST001_VST030` 
+    FOREIGN KEY (`mst001_id`) REFERENCES `MST001` (`id`);
 
 ALTER TABLE `TR0020` ADD CONSTRAINT `VST001_TR0020` 
     FOREIGN KEY (`vst001_id`) REFERENCES `VST001` (`id`);
 
-ALTER TABLE `TR0030` ADD CONSTRAINT `TR0010_TR0030` 
-    FOREIGN KEY (`tr001_id`) REFERENCES `TR0010` (`id`);
+ALTER TABLE `TR0020` ADD CONSTRAINT `MST001_TR0020` 
+    FOREIGN KEY (`mst001_id`) REFERENCES `MST001` (`id`);
 
-ALTER TABLE `TR0040` ADD CONSTRAINT `TR0010_TR0040` 
-    FOREIGN KEY (`tr001_id`) REFERENCES `TR0010` (`id`);
+ALTER TABLE `TR0030` ADD CONSTRAINT `MST001_TR0030` 
+    FOREIGN KEY (`mst001_id`) REFERENCES `MST001` (`id`);
+
+ALTER TABLE `TR0040` ADD CONSTRAINT `MST001_TR0040` 
+    FOREIGN KEY (`mst001_id`) REFERENCES `MST001` (`id`);

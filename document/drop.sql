@@ -5,7 +5,7 @@
 # Project name:                                                          #
 # Author:                                                                #
 # Script type:           Database drop script                            #
-# Created on:            2015-08-07 23:14                                #
+# Created on:            2015-08-18 19:36                                #
 # ---------------------------------------------------------------------- #
 
 
@@ -17,21 +17,21 @@ ALTER TABLE `VST001` DROP FOREIGN KEY `MST001_VST001`;
 
 ALTER TABLE `TR0010` DROP FOREIGN KEY `MST001_TR0010`;
 
-ALTER TABLE `VST010` DROP FOREIGN KEY `VST001_VST010`;
-
 ALTER TABLE `VST010` DROP FOREIGN KEY `TR0010_VST010`;
 
-ALTER TABLE `VST020` DROP FOREIGN KEY `VST001_VST020`;
+ALTER TABLE `VST010` DROP FOREIGN KEY `MST001_VST010`;
 
-ALTER TABLE `VST030` DROP FOREIGN KEY `VST001_VST030`;
+ALTER TABLE `VST020` DROP FOREIGN KEY `MST001_VST020`;
 
-ALTER TABLE `TR0020` DROP FOREIGN KEY `TR0010_TR0020`;
+ALTER TABLE `VST030` DROP FOREIGN KEY `MST001_VST030`;
 
 ALTER TABLE `TR0020` DROP FOREIGN KEY `VST001_TR0020`;
 
-ALTER TABLE `TR0030` DROP FOREIGN KEY `TR0010_TR0030`;
+ALTER TABLE `TR0020` DROP FOREIGN KEY `MST001_TR0020`;
 
-ALTER TABLE `TR0040` DROP FOREIGN KEY `TR0010_TR0040`;
+ALTER TABLE `TR0030` DROP FOREIGN KEY `MST001_TR0030`;
+
+ALTER TABLE `TR0040` DROP FOREIGN KEY `MST001_TR0040`;
 
 # ---------------------------------------------------------------------- #
 # Drop table "MST004"                                                    #
