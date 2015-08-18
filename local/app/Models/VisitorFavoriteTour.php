@@ -5,20 +5,18 @@ use Input;
 use DateTime;
 use App\Emodel;
 use Validator;
-class VisitorFavotiteTour extends Emodel {
+class VisitorFavoriteTour extends Emodel {
 	protected $table = 'VST010';
 
 	public static function rules($data)
 	{
 		$error = array();
 		$rules = array(
-			'vst001_id'     => 'required',
-            'tr001_id'      => 'required',
+            'tourId'      => 'required',
         );
 
 		$messages = array(
-            'vst001_id.required'    => 'Profile pengunjung harus ada',
-            'tr001_id.required'		=> 'Profil Tur harus terpilih',
+            'tourId.required'		=> 'Profil Tur harus terpilih',
 		);
 		
         $v = Validator::make($data, $rules, $messages);
@@ -31,8 +29,8 @@ class VisitorFavotiteTour extends Emodel {
 
 	public function doParams($object, $data)
 	{
-		$object->vst001_id      = Input::get('vst001Id');
-		$object->tr001_id    	 = Input::get('tr001Id');
+		$object->mst001_id = Auth::user()->id;
+		$object->tr010_id  = $data['tourId'];
 		return $object;
 	}
 

@@ -12,13 +12,13 @@ class VisitorItenary extends Emodel {
 	{
 		$error = array();
 		$rules = array(
-			'field1'      	=> 'required',
-            'field2'      => 'required',
+			'title'      	=> 'required',
+            'description'      => 'required',
         );
 
 		$messages = array(
-            'field1.required'		=> 'Field 1 harus diisi',
-            'field2.required'		=> 'Field 2 harus diisi',
+            'title.required'		=> 'Field 1 harus diisi',
+            'description.required'		=> 'Field 2 harus diisi',
 		);
 		
         $v = Validator::make($data, $rules, $messages);
@@ -31,14 +31,21 @@ class VisitorItenary extends Emodel {
 
 	public function doParams($object, $data)
 	{
-		$object->field1      = Input::get('field1');
-		$object->field2    	 = Input::get('field2');
-		
+		$object->mst001_id 		= Auth::user()->id;
+		$object->line_number 	= $this->getMaxLineNumber();
+		$object->title      	= $data['title'];
+		$object->description   	= $data['description'];
 		return $object;
 	}
 
 	private function getMaxLineNumber(){
-		return DB::select()
+		$result = VisitorItenary::max('line_number')->where('mst001_id', '=', Auth::user()->id);
+		if($result != null){
+			return $result->get()->line_number + 1;
+		}
+
+		return 1;
 	}
+
 
 }

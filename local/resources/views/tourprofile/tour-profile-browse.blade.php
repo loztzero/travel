@@ -5,7 +5,7 @@
 
 @include('layouts.message-helper')
 <table class="table table-striped table-bordered bordered striped">
-	<form class="col s12" action="save" method="post">
+	<form class="col s12" action="{{App::make('url')->to('/tour-profile/save')}}" method="post">
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 		<input type="hidden" name="id" value="{{Input::old('id')}}">
 		<div class="row">

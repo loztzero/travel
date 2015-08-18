@@ -44,6 +44,44 @@
   <br>
   <div class="container" ng-controller="MainCtrl">
 
+    <div class="row">
+      <div class="col m3">
+        <select class="default-browser">
+          <option value="">All Category</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+      </div>
+
+      <div class="col m2">
+        <div class="browser-default">
+          <input placeholder="Range Budget From" id="first_name" type="text" class="validate">
+        </div>
+      </div>
+
+      <div class="col m2">
+        <div class="browser-default">
+          <input placeholder="Range Budget From" id="first_name" type="text" class="validate">
+        </div>
+      </div>
+
+      <div class="browser-default col m3">
+        <select>
+          <option value="">City</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+      </div>
+
+      <div class="col m2">
+        <a class="waves-effect waves-light btn">Search</a>
+      </div>
+
+    </div>
+    
+
     @if(Auth::user())
     <div class="row">
       <div class="col s3">
@@ -86,6 +124,9 @@ $(document).ready(function() {
     }
   );
 
+  $(document).ready(function() {
+      $('select').material_select();
+  });
 
 });
 </script>
