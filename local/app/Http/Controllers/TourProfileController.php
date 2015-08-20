@@ -15,29 +15,29 @@ class TourProfileController extends Controller {
 	}
 
 	public function postSave(){
-		echo "yeye";
-		// $data = Input::all();
-		// $tourProfile = new TourProfile();
-		// $errorBag = $tourProfile->rules($data);
+		// echo "yeye";
+		$data = Input::all();
+		$tourProfile = new TourProfile();
+		$errorBag = $tourProfile->rules($data);
 		
-		// if(count($errorBag) > 0){
+		if(count($errorBag) > 0){
 
-		// 	Session::flash('error', $errorBag);
-		// 	return redirect('tour-profile')->withInput($data);	
-		// } else {
+			Session::flash('error', $errorBag);
+			return redirect('tour-profile')->withInput($data);	
+		} else {
 
-		// 	if(isset($data['id'])){
-		// 		$tourProfile = TourProfile::find($data['id']);
-		// 		if($tourProfile == null){
-	 //    			$tourProfile = new TourProfile();
-	 //    		}
-		// 	}
+			if(isset($data['id'])){
+				$tourProfile = TourProfile::find($data['id']);
+				if($tourProfile == null){
+	    			$tourProfile = new TourProfile();
+	    		}
+			}
 
-		// 	$tourProfile->doParams($tourProfile, $data);
-		// 	$tourProfile->save();
+			$tourProfile->doParams($tourProfile, $data);
+			$tourProfile->save();
 			
-		// 	return redirect('tour-profile')->with('message', array('Data tour profile telah berhasil di buat'));
-		// }
+			return redirect('tour-profile')->with('message', array('Data tour profile telah berhasil di buat'));
+		}
 	}
 
 	public function postLoadData(){
