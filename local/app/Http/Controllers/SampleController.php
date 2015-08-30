@@ -2,11 +2,19 @@
 
 use Input, Session, Redirect;
 use App\Models\Sample;
+use Facebook;
 class Samplecontroller extends Controller {
 
 	public function getIndex(){
 		//print_r($sample);
 		$sample = Sample::all();
+
+		$fb = new Facebook\Facebook([
+  'app_id' => '{app-id}',
+  'app_secret' => '{app-secret}',
+  'default_graph_version' => 'v2.2',
+  ]);
+
 		return view('sample.sample-browse')->with('sample', $sample);
 	}
 

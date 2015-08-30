@@ -10,7 +10,9 @@
         "barryvdh/laravel-dompdf": "0.6.*",
         "maatwebsite/excel": "~2.0.0",
         "laravel/framework": "5.1.*",
-        "filp/whoops": "~1.0"
+        "filp/whoops": "~1.0",
+        "facebook/php-sdk-v4" : "~5.0",
+        "laravel/socialite": "^2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
