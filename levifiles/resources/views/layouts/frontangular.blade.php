@@ -6,6 +6,10 @@
 
   <link media="all" type="text/css" rel="stylesheet" href="{{ App::make('url')->to('/') }}/assets/css/bootstrap-theme.css">
 
+   <link href="{{ App::make('url')->to('/') }}/assets/css/roboto.min.css" rel="stylesheet">
+  <link href="{{ App::make('url')->to('/') }}/assets/css/material-fullpalette.min.css" rel="stylesheet">
+  <link href="{{ App::make('url')->to('/') }}/assets/css/ripples.min.css" rel="stylesheet">
+
   <link media="all" type="text/css" rel="stylesheet" href="{{ App::make('url')->to('/') }}/assets/css/sticky-footer-navbar.css">
 
   <link media="all" type="text/css" rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/d004434a5ff76e7b97c8b07c01f34ca69e635d97/build/css/bootstrap-datetimepicker.css">
@@ -17,7 +21,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -63,5 +67,7 @@
 <script src="{{App::make('url')->to('/')}}/assets/js/jquery.js"></script>
 <script src="{{App::make('url')->to('/')}}/assets/js/bootstrap.js"></script>
 <script src="{{App::make('url')->to('/')}}/assets/js/ui-bootstrap-tpls-0.13.0.js"></script>
+<script src="{{App::make('url')->to('/')}}/assets/js/ripples.min.js"></script>
+<script src="{{App::make('url')->to('/')}}/assets/js/material.min.js"></script>
 @yield('script')
 </html>

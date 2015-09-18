@@ -23,6 +23,7 @@ Route::group(array('before' => 'auth'), function(){
 
 Route::controller('builder', 'BuilderController');
 Route::controller('main', 'MainController');
+Route::controller('hotel', 'HotelController');
 
 //Route::get('/', 'WelcomeController@index');
 Route::controller('angular', 'AngularController');
