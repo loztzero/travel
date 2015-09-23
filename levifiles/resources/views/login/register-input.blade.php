@@ -1,11 +1,11 @@
 @extends('layouts.frontangular')
 @section('content')
 <div class="row" ng-controller="MainCtrl">
-	<div class="col-md-8">
+	<div class="col-md-8 col-md-offset-2 col-sm-12">
 
 		<div class="panel panel-primary">
 			<div class="panel-heading">
-				<h3 class="panel-title">Pendaftaran</h3>
+				<h3 class="panel-title">Create Your Boardingpassku Profile</h3>
 			</div>
 			<div class="panel-body">
 				@if (count($errors) > 0)
@@ -25,20 +25,33 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="password" class="col-sm-3 control-label">Sandi</label>
+						<label for="password" class="col-sm-3 control-label">Password</label>
 						<div class="col-sm-8">
-							<input type="password" class="form-control" id="password" name="password" placeholder="Sandi">
+							<input type="password" class="form-control" id="password" name="password" placeholder="Password">
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="repassword" class="col-sm-3 control-label">Konfirmasi Sandi</label>
+						<label for="repassword" class="col-sm-3 control-label">Confirmation Password</label>
 						<div class="col-sm-8">
 							<input type="password" class="form-control" id="repassword" name="repassword" placeholder="Konfirmasi Sandi">
 						</div>
 					</div>
 					<div class="form-group">
+						<label for="firstName" class="col-sm-3 control-label">First Name</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" value="{{ old('firstName') }}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="lastName" class="col-sm-3 control-label">Last Name</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" value="{{ old('lastName') }}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="email" class="col-sm-3 control-label">Last Name</label>
 						<div class="col-sm-offset-3 col-sm-8">
-							<button type="submit" class="btn btn-primary">Daftar</button>
+							<button type="submit" class="btn btn-primary">Sign Up</button>
 						</div>
 					</div>
 				</form>
