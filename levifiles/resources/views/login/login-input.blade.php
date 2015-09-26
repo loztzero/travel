@@ -1,11 +1,11 @@
 @extends('layouts.frontangular')
 @section('content')
 <div class="row" ng-controller="MainCtrl">
-	<div class="col-md-4 col-md-offset-4">
+	<div class="col-md-4 col-md-offset-4 col-sm-12">
 
 		<div class="panel panel-primary">
-			<div class="panel-heading">
-				<h3 class="panel-title">Login</h3>
+			<div class="panel-heading panel-teal-900">
+				<h3 class="panel-title">Sign In</h3>
 			</div>
 			<div class="panel-body">
 
@@ -21,9 +21,9 @@
 						<input type="text" class="form-control" id="email" name="email" placeholder="Email">
 					</div>
 					<div class="form-group">
-						<input type="password" class="form-control" id="password" name="password" placeholder="Sandi">
+						<input type="password" class="form-control" id="password" name="password" placeholder="Password">
 					</div>
-					<button type="submit" class="btn btn-primary pull-right">Login</button>
+					<button type="submit" class="btn btn-primary pull-right">Log In</button>
 				</form>
 
 			</div>

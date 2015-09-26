@@ -49,7 +49,7 @@
 		    <input type="text" class="form-control" id="description" name="description" placeholder="Deskripsi" value="{{ isset($userDetail) ? $userDetail->description : null }}">
 		  </div>
 
-		  <button type="submit" class="btn btn-primary">Submit</button>
+		  <button type="submit" class="btn btn-primary">Save My Profile</button>
 		</form>
 
 	</div>

@@ -3,15 +3,18 @@
 use Illuminate\Routing\UrlGenerator;
 use Input, Auth, Request, Session, Redirect, Hash;
 use App\User;
+use App\Libraries\Helpers;
 class MainController extends Controller {
 
 	public function getIndex()
 	{
-		if(Auth::check()){
-			//echo "welcome".Auth::user()->email;
-		}
-
-		return view('home.home-browse', array('data' => 'bebek'));
+		// if(Auth::check()){
+		// 	//echo "welcome".Auth::user()->email;
+		// }
+		// $url = 'http://api.travelmart.com.cn/webservice.asmx/GetCountry?UserID=api&Password=888888&Lang=en';
+		// $countries = Helpers::xmlToJson($url);
+		// $countries = json_decode($countries);
+		return view('home.home-browse')->with('countries', array());
 	}
 
 	public function getRegister()

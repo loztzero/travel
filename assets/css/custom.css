@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+	.row-gap{margin-top:15px;}
+
+	.basic-list-group {
+		margin-bottom:100px;
+	}
+}
+
+.basic-list-group {
+	list-style-type: none;
+	margin:0px;
+	padding:0px;
+	border:1px solid #ddd;
+	border-bottom: none;
+	border-radius: 5px;
+}
+
+.basic-list-group li{
+	border-bottom: 1px solid #ddd;
+	margin:0px;
+	padding:10px 16px;
+}
+
+.white{
+	color:white;
+}
