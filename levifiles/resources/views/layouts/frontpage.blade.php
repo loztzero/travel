@@ -2,9 +2,9 @@
 <html>
 <head>
   <title>Boardingpassku</title>
-  <link media="all" type="text/css" rel="stylesheet" href="{{App::make('url')->to('/')}}/assets/css/bootstrap.css">
+  <link media="all" type="text/css" rel="stylesheet" href="{{App::make('url')->to('/')}}/assets/css/bootstrap.min.css">
 
-  <link media="all" type="text/css" rel="stylesheet" href="{{ App::make('url')->to('/') }}/assets/css/bootstrap-theme.css">
+  <link media="all" type="text/css" rel="stylesheet" href="{{ App::make('url')->to('/') }}/assets/css/bootstrap-theme.min.css">
 
   <link media="all" type="text/css" rel="stylesheet" href="{{ App::make('url')->to('/') }}/assets/css/sticky-footer-navbar.css">
 

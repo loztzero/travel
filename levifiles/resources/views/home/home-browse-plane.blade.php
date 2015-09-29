@@ -1,4 +1,4 @@
-<div class="panel panel-default">
+<div class="panel panel-default" style="height:448px;">
 	<div class="panel-body">
 		<form>
 			<div class="radio">
@@ -50,11 +50,7 @@
 				</div>
 			</div>
 
-			<div class="form-group">
-				<div class="col-md-4" style="padding:0px 0px 15px 10px;">
-					<button type="submit" class="btn btn-primary pull-right">Cari</button>
-				</div>
-			</div>
+			<button type="submit" class="btn  btn-material-teal-900 btn-sm">Search Flight</button>
 		</form>
 
 	</div>

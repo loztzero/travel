@@ -2,6 +2,7 @@
 <html ng-app="ui.boardingpassku">
 <head>
   <title>Boardingpassku</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link media="all" type="text/css" rel="stylesheet" href="{{App::make('url')->to('/')}}/assets/css/bootstrap.min.css">
 
   <link media="all" type="text/css" rel="stylesheet" href="{{App::make('url')->to('/')}}/assets/css/custom.css">
@@ -9,8 +10,8 @@
 {{--   <link media="all" type="text/css" rel="stylesheet" href="{{ App::make('url')->to('/') }}/assets/css/bootstrap-theme.min.css"> --}}
 
    <link href="{{ App::make('url')->to('/') }}/assets/css/roboto.min.css" rel="stylesheet">
-  <link href="{{ App::make('url')->to('/') }}/assets/css/material-fullpalette.min.css" rel="stylesheet">
   <link href="{{ App::make('url')->to('/') }}/assets/css/ripples.min.css" rel="stylesheet">
+  <link href="{{ App::make('url')->to('/') }}/assets/css/material-fullpalette.min.css" rel="stylesheet">
 
   {{-- <link media="all" type="text/css" rel="stylesheet" href="{{ App::make('url')->to('/') }}/assets/css/sticky-footer-navbar.css"> --}}
 
@@ -80,6 +81,12 @@
     @yield('content')
   </div><!-- /.container -->
 
+  <div id="preload">
+    <div class="preload-bg" style="position:absolute;left:50%;top:50%;">
+      <button class="btn btn-fab btn-fab-mini btn-sm btn-success" id="preload-icon"><i class="mdi-action-autorenew"></i></button>
+    </div>
+  </div>
+
 </body>
 <script src="{{App::make('url')->to('/')}}/assets/js/angular.min.js"></script>
 <script src="{{App::make('url')->to('/')}}/assets/js/angular-sanitize.js"></script>
@@ -91,5 +98,7 @@
 <script src="{{App::make('url')->to('/')}}/assets/js/ui-bootstrap-tpls-0.13.0.js"></script>
 <script src="{{App::make('url')->to('/')}}/assets/js/ripples.min.js"></script>
 <script src="{{App::make('url')->to('/')}}/assets/js/material.min.js"></script>
+<script src="{{App::make('url')->to('/')}}/assets/js/galleria-1.4.2.min.js"></script>
+<script src="{{App::make('url')->to('/')}}/assets/js/themes/classic/galleria.classic.min.js"></script>
 @yield('script')
 </html>

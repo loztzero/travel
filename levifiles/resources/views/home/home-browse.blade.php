@@ -80,6 +80,53 @@ app.controller("MainCtrl", function ($scope, $http, $filter) {
 
 	$scope.field = {};
 	$scope.field.country = 'Indonesia';
+
+	$scope.cities = [];
+	$scope.hotels = [];
+	$scope.field.hotel = "";
+	$("#preload").show();
+	
+	$scope.getHotels = function(){
+		$("#preload").show();
+		var city = $scope.field.city.split(", ");
+		$http.get("{{App::make('url')->to('/hotel/hotels')}}/" + city[0]).success(function(response) {
+			$scope.hotels = response;
+			$("#preload").hide();
+			// if(response.length > 0){
+			// 	//$scope.field.hotel = response[0];
+			// }
+			$scope.field.hotel = "";
+			console.log($scope.field.city);
+			console.log(response);
+			
+		})
+	};
+
+	$scope.getCities = function(){
+		$("#preload").show();
+		$http.get("{{App::make('url')->to('/hotel/cities')}}/" + $scope.field.country).success(function(response) {
+			$scope.cities = response;
+			$scope.field.city = '';
+			$("#preload").hide();
+			if(response.length > 0){
+				$scope.field.city = response[0];
+				$scope.getHotels();
+			}
+			
+		})
+	};
+
+	//init indonesia city
+	$scope.getCities();
+	
+
+
 });
+
+function MyCtrl($scope) {
+    angular.element(document).ready(function () {
+        document.getElementById('msg').innerHTML = 'Hello';
+    });
+}
 </script>
 @stop

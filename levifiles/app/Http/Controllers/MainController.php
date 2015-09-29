@@ -8,13 +8,13 @@ class MainController extends Controller {
 
 	public function getIndex()
 	{
-		// if(Auth::check()){
-		// 	//echo "welcome".Auth::user()->email;
-		// }
-		// $url = 'http://api.travelmart.com.cn/webservice.asmx/GetCountry?UserID=api&Password=888888&Lang=en';
-		// $countries = Helpers::xmlToJson($url);
-		// $countries = json_decode($countries);
-		return view('home.home-browse')->with('countries', array());
+		if(Auth::check()){
+			//echo "welcome".Auth::user()->email;
+		}
+		$url = 'http://api.travelmart.com.cn/webservice.asmx/GetCountry?UserID=api&Password=888888&Lang=en';
+		$countries = Helpers::xmlToJson($url);
+		$countries = json_decode($countries);
+		return view('home.home-browse')->with('countries', $countries);
 	}
 
 	public function getRegister()

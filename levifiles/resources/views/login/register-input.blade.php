@@ -5,7 +5,7 @@
 
 		<div class="panel panel-primary">
 			<div class="panel-heading">
-				<h3 class="panel-title">Create Your Boardingpassku Profile</h3>
+				<h3 class="panel-title">Create Your Boardingpassku Profile Ok</h3>
 			</div>
 			<div class="panel-body">
 				@if (count($errors) > 0)
@@ -49,9 +49,9 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="email" class="col-sm-3 control-label">Last Name</label>
 						<div class="col-sm-offset-3 col-sm-8">
-							<button type="submit" class="btn btn-primary">Sign Up</button>
+							<button type="submit" class="btn btn-primary">Sign Up</button><br>
+							<small>By clicking the "Sign Up" button below, i agree with Boardingpassku.com Privacy Policy and Terms & Condition.</small>
 						</div>
 					</div>
 				</form>

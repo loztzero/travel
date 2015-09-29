@@ -4,8 +4,8 @@
 	<div class="col-md-4 col-md-offset-4 col-sm-12">
 
 		<div class="panel panel-primary">
-			<div class="panel-heading panel-teal-900">
-				<h3 class="panel-title">Sign In</h3>
+			<div class="panel-heading material-teal-900">
+				<h3 class="panel-title ">Sign In</h3>
 			</div>
 			<div class="panel-body">
 

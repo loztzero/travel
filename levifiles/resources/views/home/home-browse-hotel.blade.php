@@ -1,20 +1,30 @@
 <div class="panel panel-default">
   <div class="panel-body">
-    <form>
-
+    <form method="post" action="{{App::make('url')->to('/hotel/search')}}">
+      <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <div class="form-group">
-        <label class="control-label">Country *</label>
-         <select class="form-control" ng-model="field.country" ng-change="getCity()">
+        <label class="control-label">Country</label>
+         <select class="form-control" ng-model="field.country" ng-change="getCities()" name="country">
           <option value="">Select Country</option>
-          {{-- @foreach($countries->Countrys->Country As $value)
+          @foreach($countries->Countrys->Country As $value)
           <option>{{ucfirst(strtolower($value->CountryName))}}</option>
-          @endforeach  --}}
+          @endforeach
          </select>
       </div>
 
       <div class="form-group">
-        <label for="locationHotel">Location / Hotel</label>
-        <input type="text" class="form-control" id="locationHotel" placeholder="Location or Hotel Name">
+        <label class="control-label">City</label>
+         <select class="form-control" ng-model="field.city" name="city" ng-change="getHotels()">
+          <option ng-repeat="city in cities" value="@{{city}}">@{{city}}</option>
+         </select>
+      </div>
+
+      <div class="form-group">
+        <label for="locationHotel">Hotel</label>
+        <select class="form-control" ng-model="field.hotel" name="hotel">
+          <option value="">Select or Leave Empty</option>
+          <option ng-repeat="hotel in hotels" value="@{{hotel.HotelID}}">@{{hotel.HotelName}}</option>
+         </select>
       </div>
 
       <div class="form-group row">
@@ -62,7 +72,8 @@
         <div style="clear:both;"></div>
       </div>
 
-      <button type="submit" class="btn btn-material-teal-900 btn-sm">Search</button>
+      <input type="hidden" name="_token" value="{{ csrf_token() }}">
+      <button type="submit" class="btn btn-material-teal-900 btn-sm">Search Hotel</button>
     </form>
   </div>
 </div>
