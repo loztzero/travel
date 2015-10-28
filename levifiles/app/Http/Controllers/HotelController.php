@@ -5,6 +5,8 @@ use Input, Auth, Request, Session, Redirect, Hash;
 use App;
 use App\User;
 use App\Libraries\Helpers;
+use DB;
+use App\Models\Country;
 class HotelController extends Controller {
 
 	public function getIndex()
@@ -14,6 +16,35 @@ class HotelController extends Controller {
 		$countries = json_decode($countries);
 
 		return view('hotel.hotel-browse')->with('countries', $countries);
+	}
+
+	public function getInsertCountry()
+	{
+		$url = 'http://api.travelmart.com.cn/webservice.asmx/GetCountry?UserID=api&Password=888888&Lang=en';
+		$countries = Helpers::xmlToJson($url);
+		$countries = json_decode($countries);
+
+		echo '<pre>';
+		//print_r($countries->Countrys->Country);
+		DB::beginTransaction();
+		try {
+
+			foreach($countries->Countrys->Country as $key => $value):
+				$negara = ucfirst(strtolower($value->CountryName));
+				$country = new Country();
+				$country->cntry_code = $negara;
+				$country->cntry_name = $negara;
+				$country->save();
+			endforeach;	
+
+		} catch (Exception $e) {
+			DB::rollback();
+			echo 'terjadi error cuy';
+		}
+
+		DB::commit();
+
+		echo 'simpan telah berhasil';
 	}
 
 	public function getCities($country){
